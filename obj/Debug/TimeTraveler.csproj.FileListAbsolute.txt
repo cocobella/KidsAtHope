@@ -32,3 +32,5 @@ c:\users\coraf_000\documents\visual studio 2015\Projects\TimeTraveler\TimeTravel
 c:\users\coraf_000\documents\visual studio 2015\Projects\TimeTraveler\TimeTraveler\bin\Microsoft.AspNet.FriendlyUrls.xml
 c:\users\coraf_000\documents\visual studio 2015\Projects\TimeTraveler\TimeTraveler\obj\Debug\TimeTraveler.dll
 c:\users\coraf_000\documents\visual studio 2015\Projects\TimeTraveler\TimeTraveler\obj\Debug\TimeTraveler.pdb
+C:\Users\coraf_000\Documents\KidsAtHope\obj\Debug\TimeTraveler.dll
+C:\Users\coraf_000\Documents\KidsAtHope\obj\Debug\TimeTraveler.pdb
