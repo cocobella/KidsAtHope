@@ -135,3 +135,10 @@ textarea {
     padding: 20px 20px 20px 20px;
     background: #000;
 }
+
+.contentTitle{
+    color: rgb(255, 150, 1);
+    font-family: Bradley Hand ITC;
+    font-size: 400%;
+    font-weight: bold;
+}
