@@ -7,22 +7,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="container">
         <div id="block1">
-            <div class="row-1">
-                <div class="main">
-                    <div class="container_12">
-                        <div class="grid_12">
-                            <nav>
-                            <ul style="border-width:thick; border-color:white" class="menu">
-                                <li><a class="active" href="Title.aspx">Home</a></li>
-                                <li><a href="AboutTT.aspx">About Time Traveler</a></li>
-                            </ul>
-                        </nav>
-                        </div>
-                    </div>
-                    <div class="clear">
-                    </div>
-                </div>
-            </div>
+            
             <div class="row-2">
                 <div class="main">
                     <div class="container_12">
