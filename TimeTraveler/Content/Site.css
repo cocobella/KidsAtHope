@@ -80,10 +80,11 @@ textarea {
 }
 
 .family :checked + label img {
-  transform: scale(0.8);
-  box-shadow: 0 0 5px #333;
-  z-index: -1;
-
+    transform: scale(0.8);
+    box-shadow: 0 0 5px #333;
+    z-index: -1;
+}
+ 
 .footer{
     display:inline;
     float:left;
@@ -114,4 +115,32 @@ h1 {
 
 .yellow{
         color: rgb(255, 150, 1);
+}
+
+h1{
+        padding: 15px 0 0 0;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+}
+
+.title{
+    line-height: 1.2em;
+    letter-spacing: -1px;
+}
+
+.logo{
+    display: inline-block;
+    font-size: 60px;
+    line-height: 1.2em;
+    color: #262626;
+    cursor: pointer;
+    letter-spacing: -3px;
+}
+
+.backpiece{
+
+}
+
+.mainContent{
+
 }

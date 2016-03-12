@@ -321,7 +321,7 @@
     <Content Include="images\png\img_title_button.png" />
     <Content Include="images\png\internship.png" />
     <Content Include="images\png\internship_t.png" />
-    <Content Include="images\png\Kids_at_Hope.png" />
+    <Content Include="images\Kids_at_Hope.png" />
     <Content Include="images\png\manager_and_business_person.png" />
     <Content Include="images\png\manager_and_business_person_t.png" />
     <Content Include="images\png\marker-2.png" />
@@ -407,6 +407,7 @@
     <Content Include="images\png\women_shelter_t.png" />
     <Content Include="images\png\Workout.png" />
     <Content Include="images\png\Workout_t.png" />
+    <Content Include="images\social-icons.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
