@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace TImeTravler.Controllers
+namespace TimeTravler.Controllers
 {
 	public class HomeController : Controller
 	{
@@ -25,6 +25,11 @@ namespace TImeTravler.Controllers
 			ViewBag.Message = "Your contact page.";
 
 			return View();
+		}
+
+		public ActionResult HomeAndFamily()
+		{
+			return View();	
 		}
 	}
 }

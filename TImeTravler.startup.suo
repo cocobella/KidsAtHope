@@ -1,7 +1,9 @@
 {
   "SingleProjectMode": 0,
   "SingleProjectMruCount": 5,
-  "MRU": [],
+  "MRU": [
+    "TimeTravler"
+  ],
   "MultiProjectConfigurations": {},
   "ActivateCommandLineArguments": false,
   "Version": 2

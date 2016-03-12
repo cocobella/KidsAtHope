@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace TImeTravler
+namespace TimeTravler
 {
 	public class FilterConfig
 	{
