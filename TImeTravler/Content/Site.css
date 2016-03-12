@@ -36,3 +36,21 @@ textarea {
     color: #262626;
     background-color: black;
 }
+
+.logo{
+    font-size: 60px;
+    line-height: 1.2em;
+    color: #262626;
+    letter-spacing: -3px;
+    position: relative;
+}
+
+h1 {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.yellow{
+        color: rgb(255, 150, 1);
+}
