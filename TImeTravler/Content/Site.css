@@ -22,3 +22,17 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.footer{
+    display:inline;
+    float:left;
+    position:relative;
+    
+}
+
+.mainbody{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    color: #262626;
+    background-color: black;
+}
