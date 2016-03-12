@@ -133,6 +133,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\bg-top.png" />
     <Content Include="images\gif\bg-bot-tail.gif" />
     <Content Include="images\gif\button-tail.gif" />
     <Content Include="images\gif\marker-2.gif" />
@@ -286,6 +287,7 @@
     <Content Include="images\png\bg-bot-tail.png" />
     <Content Include="images\png\bg-top-tail.png" />
     <Content Include="images\png\bg-top-tail2.png" />
+    <Content Include="images\png\bg-top.png" />
     <Content Include="images\png\button-tail.png" />
     <Content Include="images\png\Button1.png" />
     <Content Include="images\png\carousel-control.png" />

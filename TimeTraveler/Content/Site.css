@@ -1,6 +1,5 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+        padding-bottom: 20px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -94,38 +93,19 @@ textarea {
 
 .mainbody{
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 100%;
     color: #262626;
     background-color: black;
-}
-
-.logo{
-    font-size: 60px;
-    line-height: 1.2em;
-    color: #262626;
-    letter-spacing: -3px;
-    position: relative;
-}
-
-h1 {
-    font-weight: normal;
-    text-transform: uppercase;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
 .yellow{
         color: rgb(255, 150, 1);
 }
 
-h1{
-        padding: 15px 0 0 0;
-        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-        text-transform: uppercase;
-}
-
 .title{
     line-height: 1.2em;
     letter-spacing: -1px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
 }
 
 .logo{
@@ -135,12 +115,23 @@ h1{
     color: #262626;
     cursor: pointer;
     letter-spacing: -3px;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.traveler{
+    font-size:25px;
+    letter-spacing:-2px;
 }
 
 .backpiece{
-
+    background:url(../images/bg-top.png) left top no-repeat; 
+    background-image:url(../images/bg-top.png);
+    padding: 30px 30px 30px 30px;
 }
 
 .mainContent{
-
+    padding: 20px 20px 20px 20px;
+    background: #000;
 }
