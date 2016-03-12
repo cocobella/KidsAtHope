@@ -1,5 +1,6 @@
 ﻿body {
-        padding-bottom: 20px;
+    padding-bottom: 20px;
+    
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -88,12 +89,11 @@ textarea {
     display:inline;
     float:left;
     position:relative;
-    
 }
 
 .mainbody{
     font-family: Arial, Helvetica, sans-serif;
-    color: #262626;
+    color: rgb(248, 224, 224);
     background-color: black;
 }
 
@@ -133,6 +133,7 @@ textarea {
 
 .mainContent{
     padding: 20px 20px 20px 20px;
+    font-size: 150%;
     background: #000;
 }
 
