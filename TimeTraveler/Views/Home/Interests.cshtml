@@ -8,6 +8,8 @@
     </div>
 </div>
 
+@using (Html.BeginForm("Interests", "Home", FormMethod.Post))
+{
 <div class="row">
     <div class="col-md-12 col-xs-12">
         <p>
@@ -23,7 +25,7 @@
                 <!--  style="-webkit-padding-start: 10px;" -->
                 <ul class="select-grid">
                     <li>
-                        <input type="checkbox" id="cb1" />
+                        <input type="checkbox" id="cb1" value="Find humor" name="interest" />
                         <label for="cb1">
                             <div class="select-grid-image">
                                 <img src="/images/interests/laugh.jpg" />
@@ -34,7 +36,7 @@
                         </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="cb2" />
+                        <input type="checkbox" id="cb2" value="Art / Drawing" name="interest" />
                         <label for="cb2">
                             <div class="select-grid-image">
                                 <img src="/images/interests/drawing.jpg" />
@@ -45,7 +47,7 @@
                         </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="cb3" />
+                        <input type="checkbox" id="cb3" value="Computers" name="interest" />
                         <label for="cb3">
                             <div class="select-grid-image">
                                 <img src="/images/interests/computers.jpg" />
@@ -56,7 +58,7 @@
                         </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="cb4" />
+                        <input type="checkbox" id="cb4" value="Reading" name="interest" />
                         <label for="cb4">
                             <div class="select-grid-image">
                                 <img src="/images/interests/reading.jpg" />
@@ -67,7 +69,7 @@
                         </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="cb5" />
+                        <input type="checkbox" id="cb5" value="Help adults" name="interest" />
                         <label for="cb5">
                             <div class="select-grid-image">
                                 <img src="/images/interests/helping.jpg" />
@@ -78,7 +80,7 @@
                         </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="cb6" />
+                        <input type="checkbox" id="cb6" value="Help kids" name="interest" />
                         <label for="cb6">
                             <div class="select-grid-image">
                                 <img src="/images/interests/helpingKids.jpg" />
@@ -89,7 +91,7 @@
                         </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="cb7" />
+                        <input type="checkbox" id="cb7" value="Play sports" name="interest" />
                         <label for="cb7">
                             <div class="select-grid-image">
                                 <img src="/images/interests/sports.jpg" />
@@ -100,7 +102,7 @@
                         </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="cb8" />
+                        <input type="checkbox" id="cb8" value="Make others laugh" name="interest" />
                         <label for="cb8">
                             <div class="select-grid-image">
                                 <img src="/images/interests/makeOthersLaugh.jpg" />
@@ -111,7 +113,7 @@
                         </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="cb9" />
+                        <input type="checkbox" id="cb9" value="Sing" name="interest" />
                         <label for="cb9">
                             <div class="select-grid-image">
                                 <img src="/images/interests/sing.jpg" />
@@ -122,7 +124,7 @@
                         </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="cb10" />
+                        <input type="checkbox" id="cb10" value="Math" name="interest" />
                         <label for="cb10">
                             <div class="select-grid-image">
                                 <img src="/images/interests/math.jpg" />
@@ -133,7 +135,7 @@
                         </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="cb11" />
+                        <input type="checkbox" id="cb11" value="Making / Fixing things" name="interest" />
                         <label for="cb11">
                             <div class="select-grid-image">
                                 <img src="/images/interests/making.jpg" />
@@ -144,7 +146,7 @@
                         </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="cb12" />
+                        <input type="checkbox" id="cb12" value="Help around the house" name="interest" />
                         <label for="cb12">
                             <div class="select-grid-image">
                                 <img src="/images/interests/aroundTheHouse.jpg" />
@@ -155,7 +157,7 @@
                         </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="cb13" />
+                        <input type="checkbox" id="cb13" value="Help animals" name="interest" />
                         <label for="cb13">
                             <div class="select-grid-image">
                                 <img src="/images/interests/animals.jpg" />
@@ -166,7 +168,7 @@
                         </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="cb14" />
+                        <input type="checkbox" id="cb14" value="Help the elderly or homeless" name="interest" />
                         <label for="cb14">
                             <div class="select-grid-image">
                                 <img src="/images/interests/helpElderly.jpg" />
@@ -177,7 +179,7 @@
                         </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="cb15" />
+                        <input type="checkbox" id="cb15" value="Writing" name="interest" />
                         <label for="cb15">
                             <div class="select-grid-image">
                                 <img src="/images/interests/writing.jpg" />
@@ -211,3 +213,4 @@
     </div>
 
 </div>
+}
