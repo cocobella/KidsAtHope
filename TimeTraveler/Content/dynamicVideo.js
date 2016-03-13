@@ -131,4 +131,72 @@ $(document).ready(function () {
         }
 
     });
+
+    $('input[name="service"]').click(function () {
+
+        var span = document.getElementById('modalServiceChoice');
+        var theOption = $('input[name="service"]:checked').val();
+
+        switch (theOption) {
+            case "animals":
+                span.innerHTML = "helping animals";
+                $("#modalServiceVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_3/animal.mp4");
+                break;
+            case "children":
+                span.innerHTML = "mentoring other children";
+                $("#modalServiceVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_3/mentor.mp4");
+                break;
+            case "coach":
+                span.innerHTML = "being a coach";
+                $("#modalServiceVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_3/coach.mp4");
+                break;
+            case "environment":
+                span.innerHTML = "protecting the environment";
+                $("#modalServiceVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_3/environment.mp4");
+                break;
+            case "graffiti":
+                span.innerHTML = "cleaning up the graffiti";
+                $("#modalServiceVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_3/graffiti.mp4");
+                break;
+            case "homeless":
+                span.innerHTML = "helping out at a homeless shelter";
+                $("#modalServiceVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_3/homeless.mp4");
+                break;
+        }
+
+    });
+
+    $('input[name="hobby"]').click(function () {
+
+        var span = document.getElementById('modalHobbyChoice');
+        var theOption = $('input[name="hobby"]:checked').val();
+
+        switch (theOption) {
+            case "hiking":
+                span.innerHTML = "go hiking";
+                $("#modalHobbyVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_4/hiking.mp4");
+                break;
+            case "music":
+                span.innerHTML = "play music";
+                $("#modalHobbyVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_4/music.mp4");
+                break;
+            case "photo":
+                span.innerHTML = "take photographs";
+                $("#modalHobbyVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_4/photo.mp4");
+                break;
+            case "sport":
+                span.innerHTML = "play sports";
+                $("#modalHobbyVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_4/sport.mp4");
+                break;
+            case "travel":
+                span.innerHTML = "see the world";
+                $("#modalHobbyVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_4/travel.mp4");
+                break;
+            case "water":
+                span.innerHTML = "get into water sports";
+                $("#modalHobbyVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_4/watersports.mp4");
+                break;
+        }
+
+    });
 });
