@@ -462,13 +462,10 @@
     <Content Include="Views\Home\Welcome.cshtml" />
     <Content Include="Views\Home\FamilyType.cshtml" />
     <Content Include="Views\Home\EducationAndCareer.cshtml" />
-    <Content Include="Views\Home\EducationResult.cshtml" />
     <Content Include="Views\Home\EducationType.cshtml" />
     <Content Include="Views\Home\CareerType.cshtml" />
-    <Content Include="Views\Home\CareerResult.cshtml" />
     <Content Include="Views\Home\CommunityAndServiceType.cshtml" />
-    <Content Include="Views\Home\CommunityAndServiceTypeResult.cshtml" />
-    <Content Include="Views\Home\HobbiesAndRecreation.cshtml" />
+    <Content Include="Views\Home\HobbiesAndRecreationType.cshtml" />
     <Content Include="Views\Home\HobbiesAndRecreationResult.cshtml" />
     <Content Include="Views\Home\HowWasYourVisit.cshtml" />
     <Content Include="Views\Home\TimeTravelersLog.cshtml" />

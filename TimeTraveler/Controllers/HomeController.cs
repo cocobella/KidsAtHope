@@ -50,8 +50,9 @@ namespace TimeTraveler.Controllers
         public ActionResult CareerType(string career, string otherText)
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
 
-            switch(career)
+            switch (career)
             {
                 case "athlete":
                     this.TheTraveler.Career = CareerOption.Athlete;
@@ -79,12 +80,7 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("CareerResult");
-        }
-
-        public ActionResult CareerResult()
-        {
-            return View();
+            return RedirectToAction("CommunityAndServiceType");
         }
 
         public ActionResult CommunityAndServiceType()
@@ -97,8 +93,9 @@ namespace TimeTraveler.Controllers
         {
 
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
 
-            switch(service)
+            switch (service)
             {
                 case "animals":
                     this.TheTraveler.Community = AidingCommunityOption.Animals;
@@ -126,12 +123,7 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("CommunityAndServiceTypeResult");
-        }
-
-        public ActionResult CommunityAndServiceTypeResult()
-        {
-            return View();
+            return RedirectToAction("HobbieAndRecreationType");
         }
 
         public ActionResult Contact()
@@ -155,8 +147,9 @@ namespace TimeTraveler.Controllers
         public ActionResult EducationType(string education)
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
 
-            switch(education)
+            switch (education)
             {
                 case "apprentice":
                     this.TheTraveler.Education = EducationOption.Apprenticeship;
@@ -174,25 +167,21 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("EducationResult");
+            return RedirectToAction("CareerType");
         }
 
-        public ActionResult EducationResult()
-        {
-            return View();
-        }
-
-        public ActionResult HobbiesAndRecreation()
+        public ActionResult HobbiesAndRecreationType()
         {
             return View();
         }
         
         [HttpPost] 
-        public ActionResult HobbiesAndRecreation(string hobby, string otherText)
+        public ActionResult HobbiesAndRecreationType(string hobby, string otherText)
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
 
-            switch(hobby)
+            switch (hobby)
             {
                 case "hiking":
                     this.TheTraveler.Hobby = HobbyOption.Hiking;
@@ -221,14 +210,9 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("HobbiesAndRecreationResult");
+            return RedirectToAction("TimeTravelersLog");
         }
-
-        public ActionResult HobbiesAndRecreationResult()
-        {
-            return View();
-        }
-
+        
         public ActionResult HomeType()
 		{
 			return View();	
@@ -238,6 +222,7 @@ namespace TimeTraveler.Controllers
         public ActionResult HomeType(string whereLive)
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
 
             switch (whereLive)
             {
@@ -276,7 +261,8 @@ namespace TimeTraveler.Controllers
         public ActionResult FamilyType(string familyType)
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
-            
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
+
             switch (familyType)
             {
                 case "dad":
@@ -319,8 +305,10 @@ namespace TimeTraveler.Controllers
         public ActionResult Interests(string[] interest)
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
+            if (this.TheTraveler.Likes == null) this.TheTraveler.Likes = new System.Collections.Generic.List<string>();
 
-            foreach(string s in interest)
+            foreach (string s in interest)
             {
                 this.TheTraveler.Likes.Add(s);
             }
