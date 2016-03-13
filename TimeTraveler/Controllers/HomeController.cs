@@ -43,7 +43,10 @@ namespace TimeTraveler.Controllers
 
         public ActionResult CareerType()
         {
-            return View();
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
+
+            return View(this.TheTraveler);
         }
 
         [HttpPost]
@@ -80,12 +83,16 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("CommunityAndServiceType");
+            //return RedirectToAction("CommunityAndServiceType");
+            return Json(new { result = "Redirect", url = Url.Action("CommunityAndServiceType", "Home") });
         }
 
         public ActionResult CommunityAndServiceType()
         {
-            return View();
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
+
+            return View(this.TheTraveler);
         }
 
         [HttpPost]
@@ -171,12 +178,16 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("CareerType");
+            //return RedirectToAction("CareerType");
+            return Json(new { result = "Redirect", url = Url.Action("CareerType", "Home") });
         }
 
         public ActionResult HobbiesAndRecreationType()
         {
-            return View();
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
+
+            return View(this.TheTraveler);
         }
         
         [HttpPost] 
@@ -220,8 +231,10 @@ namespace TimeTraveler.Controllers
         public ActionResult HomeType()
 		{
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
-            return View(this.TheTraveler);	
-		}
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
+
+            return View(this.TheTraveler);
+        }
 
         [HttpPost]
         public ActionResult HomeType(string whereLive)
@@ -261,6 +274,8 @@ namespace TimeTraveler.Controllers
         public ActionResult FamilyType()
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
+
             return View(this.TheTraveler);
         }
 
@@ -300,12 +315,17 @@ namespace TimeTraveler.Controllers
 
         public ActionResult HowWasYourVisit()
         {
-            return View();
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
+
+            return View(this.TheTraveler);
         }
 
         public ActionResult Interests()
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
+
             return View(this.TheTraveler);
         }
         
@@ -329,25 +349,34 @@ namespace TimeTraveler.Controllers
 
         public ActionResult Pledge()
         {
-            return View();
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
+
+            return View(this.TheTraveler);
         }
 
         public ActionResult TimeTravelersLog()
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
-            return View("TimeTravelersLog", this.TheTraveler);
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
+
+            return View(this.TheTraveler);
         }
 
         public ActionResult TimeTravelersLogPrint()
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
-            return View("TimeTravelersLogPrint", this.TheTraveler);
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
+
+            return View(this.TheTraveler);
         }
 
         public ActionResult Welcome()
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
-            return View("Welcome", this.TheTraveler);
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
+
+            return View(this.TheTraveler);
         }
 
 

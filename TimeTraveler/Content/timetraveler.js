@@ -18,6 +18,10 @@ $(document).ready(function () {
         window.location = '/Home/EducationType';
     });
 
+    $('#btnTimeGo').click(function () {
+        window.location = '/Home/HowWasYourVisit';
+    });
+
     
     $('#homeSubmit').click(function () {
         $.ajax({
@@ -49,6 +53,46 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             url: '/Home/EducationType',
+            data: JSON.stringify(getItem()),
+            contentType: "application/json; charset=UTF-8",
+            dataType: "json",
+            success: function (data) {
+                window.location = data.url;
+            }
+        });
+    });
+    
+    $('#careerSubmit').click(function () {
+        $.ajax({
+            type: "POST",
+            url: '/Home/CareerType',
+            data: JSON.stringify(getItem()),
+            contentType: "application/json; charset=UTF-8",
+            dataType: "json",
+            success: function (data) {
+                window.location = data.url;
+            }
+        });
+    });
+
+    
+    $('#commSubmit').click(function () {
+        $.ajax({
+            type: "POST",
+            url: '/Home/CommunityAndServiceType',
+            data: JSON.stringify(getItem()),
+            contentType: "application/json; charset=UTF-8",
+            dataType: "json",
+            success: function (data) {
+                window.location = data.url;
+            }
+        });
+    });
+
+    $('#hobbySubmit').click(function () {
+        $.ajax({
+            type: "POST",
+            url: '/Home/HobbiesAndRecreationType',
             data: JSON.stringify(getItem()),
             contentType: "application/json; charset=UTF-8",
             dataType: "json",
