@@ -177,7 +177,7 @@ $(document).ready(function () {
                 $("#modalHobbyVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_4/hiking.mp4");
                 break;
             case "music":
-                span.innerHTML = "play music";
+                span.innerHTML = "play an instrument";
                 $("#modalHobbyVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_4/music.mp4");
                 break;
             case "photo":
@@ -193,7 +193,7 @@ $(document).ready(function () {
                 $("#modalHobbyVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_4/travel.mp4");
                 break;
             case "water":
-                span.innerHTML = "get into water sports";
+                span.innerHTML = "play water sports";
                 $("#modalHobbyVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_4/watersports.mp4");
                 break;
         }
