@@ -27,5 +27,10 @@ namespace TimeTraveler.Controllers
 		{
 			return View();	
 		}
+
+        public ActionResult Interests()
+        {
+            return View();
+        }
 	}
 }

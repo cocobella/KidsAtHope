@@ -158,6 +158,22 @@
     <Content Include="images\home_and_family\snow_house_t.png" />
     <Content Include="images\home_and_family\suburbs_house.png" />
     <Content Include="images\home_and_family\suburbs_house_t.png" />
+    <Content Include="images\interests\animals.jpg" />
+    <Content Include="images\interests\aroundTheHouse.jpg" />
+    <Content Include="images\interests\computers.jpg" />
+    <Content Include="images\interests\drawing.jpg" />
+    <Content Include="images\interests\helpElderly.jpg" />
+    <Content Include="images\interests\helping.jpg" />
+    <Content Include="images\interests\helpingKids.jpg" />
+    <Content Include="images\interests\laugh.jpg" />
+    <Content Include="images\interests\makeOthersLaugh.jpg" />
+    <Content Include="images\interests\making.jpg" />
+    <Content Include="images\interests\math.jpg" />
+    <Content Include="images\interests\music.jpg" />
+    <Content Include="images\interests\reading.jpg" />
+    <Content Include="images\interests\sing.jpg" />
+    <Content Include="images\interests\sports.jpg" />
+    <Content Include="images\interests\writing.jpg" />
     <Content Include="images\jpg\AboutTT.JPG" />
     <Content Include="images\jpg\art.jpg" />
     <Content Include="images\jpg\art_t.jpg" />
@@ -439,6 +455,7 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\HomeAndFamily.cshtml" />
+    <Content Include="Views\Home\Interests.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
