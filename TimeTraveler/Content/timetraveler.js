@@ -11,10 +11,15 @@ $(document).ready(function () {
 
     
     $('#btnWelcomeGo').click(function () {
+        window.location = '/Home/HomeType';
+    });
+    
+    
+    $('#homeSubmit').click(function () {
         $.ajax({
             type: "POST",
             url: '/Home/HomeType',
-            data: {},
+            data: JSON.stringify(getItem()),
             contentType: "application/json; charset=UTF-8",
             dataType: "json",
             success: function (data) {
@@ -22,12 +27,12 @@ $(document).ready(function () {
             }
         });
     });
-    
+
     $('#familySubmit').click(function () {
         $.ajax({
             type: "POST",
-            url: '/Home/Interests',
-            data: JSON.stringify(getFamily()),
+            url: '/Home/FamilyType',
+            data: JSON.stringify(getItem()),
             contentType: "application/json; charset=UTF-8",
             dataType: "json",
             success: function (data) {
@@ -94,10 +99,10 @@ $(document).ready(function () {
         return interests
     }
 
-    function getFamily() {
-        var family;
-        family = $('input:checked').val();
-        return family
+    function getItem() {
+        var i;
+        i = $('input:checked').val();
+        return i
     }
 
 
