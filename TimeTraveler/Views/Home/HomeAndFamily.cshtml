@@ -14,11 +14,13 @@
 		</div>
 	</div>
 
+    @using(Html.BeginForm("HomeAndFamily", "Home", FormMethod.Post))
+    {
 	<div class="row">
 		<div class="col-md-12">
 			<ul class="family" style="-webkit-padding-start: 10px;">
 				<li>
-					<input type="checkbox" id="cb1"/>
+					<input type="radio" name="whereLive" id="cb1" value="downtown"/>
 					<label for="cb1">
 						<span class="row">
 							<img src="/images/home_and_family/downtown_house.png" />
@@ -29,21 +31,21 @@
 					</label>
 				</li>
 				<li>
-					<input type="checkbox" id="cb2"/>
+					<input type="radio" name="whereLive" id="cb2" value="mountain"/>
 
 					<label for="cb2">
 						<span class="row"><img src="/images/home_and_family/mountain_house.png" /></span><span class="row">Mountains</span>
 					</label>
 				</li>
 				<li>
-					<input type="checkbox" id="cb3"/>
+					<input type="radio" name="whereLive" id="cb3" value="ranch"/>
 					<label for="cb3">
 						<span class="row"><img src="/images/home_and_family/ranch_house.png" /></span>
 						<span class="row">Ranch</span>
 					</label>
 				</li>
 				<li>
-					<input type="checkbox" id="cb4"/>
+					<input type="radio" name="whereLive" id="cb4" value="ocean"/>
 					<label for="cb4">
 						<span class="row">
 							<img src="/images/home_and_family/sea_house.png" />
@@ -52,7 +54,7 @@
 					</label>
 				</li>
 				<li>
-					<input type="checkbox" id="cb5"/>
+					<input type="radio" name="whereLive" id="cb5" value="snow"/>
 					<label for="cb5">
 						<span class="row">
 							<img src="/images/home_and_family/snow_house.png" />
@@ -64,7 +66,7 @@
 				</li>
 				<li>
 
-					<input type="checkbox" id="cb6"/>
+					<input type="radio" name="whereLive" id="cb6" value="suburb"/>
 					<label for="cb6">
 						<span class="row">
 							<img src="/images/home_and_family/suburbs_house.png" />
@@ -79,6 +81,13 @@
 			</ul>
 
 		</div>
+
+        <div class="row">
+            <div class="col-md-12 col-cs-12">
+                <button id="btnGo">Ready? Let's Go</button>
+            </div>
+        </div>
+        }
 
 	</div>
 </div>
