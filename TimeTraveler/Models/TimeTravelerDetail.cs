@@ -43,17 +43,17 @@ namespace TimeTraveler.Models
                 switch(this.FutureHome)
                 {
                     case FutureHomeOption.DowntownCity:
-                        return "Downtown City";
+                        return "in the City";
                     case FutureHomeOption.Mountains:
-                        return "In the mountains";
+                        return "in the mountains";
                     case FutureHomeOption.Ocean:
-                        return "On the ocean";
+                        return "by the ocean";
                     case FutureHomeOption.Ranch:
-                        return "On a ranch";
+                        return "on a ranch";
                     case FutureHomeOption.Snowland:
-                        return "In a snowy land";
+                        return "in a snowy land";
                     case FutureHomeOption.Suburb:
-                        return "Suburb";
+                        return "in the suburbs";
                     default:
                         return string.Empty;
                 }
@@ -91,17 +91,17 @@ namespace TimeTraveler.Models
                 switch(this.FamilyStyle)
                 {
                     case FamilyStyleOption.Dad:
-                        return "Father";
+                        return "as a father";
                     case FamilyStyleOption.Married:
-                        return "Married";
+                        return "married";
                     case FamilyStyleOption.Mother:
-                        return "Mother";
+                        return "as a mother";
                     case FamilyStyleOption.Multi_generational:
-                        return "In a multi-generational family";
+                        return "in a multi-generational family";
                     case FamilyStyleOption.SingleMale:
-                        return "Single Man";
+                        return "as a single man";
                     case FamilyStyleOption.SingleWoman:
-                        return "Single Woman";
+                        return "as a single woman";
                     default:
                         return string.Empty;
                 }
@@ -138,7 +138,7 @@ namespace TimeTraveler.Models
             {
                 switch (this.Education) {
                     case EducationOption.Apprenticeship:
-                        return "Intership / Apprenticeship";
+                        return "an apprenticeship";
                     case EducationOption.CareerSchool:
                         return "Career School";
                     case EducationOption.CommunityCollege:
@@ -182,7 +182,7 @@ namespace TimeTraveler.Models
                     case CareerOption.Athlete:
                         return "Athlete";
                     case CareerOption.Business:
-                        return "Business";
+                        return "Business-person";
                     case CareerOption.Designer:
                         return "Designer";
                     case CareerOption.Engineer:
@@ -232,17 +232,17 @@ namespace TimeTraveler.Models
                 switch(this.Community)
                 {
                     case AidingCommunityOption.Animals:
-                        return "Help Animals";
+                        return "Helping Animals";
                     case AidingCommunityOption.Children:
-                        return "Mentor children";
+                        return "Mentoring children";
                     case AidingCommunityOption.Coach:
-                        return "Coach";
+                        return "Being a Coach";
                     case AidingCommunityOption.Environment:
-                        return "Protect the environment";
+                        return "Protecting the environment";
                     case AidingCommunityOption.GraffitiCleanup:
-                        return "Help clean up graffiti";
+                        return "Helping clean up graffiti";
                     case AidingCommunityOption.Homeless:
-                        return "Homeless Shelters";
+                        return "Helping out at a Homeless Shelter";
                     case AidingCommunityOption.Other:
                         return this.CommunityOther;
                     default:
@@ -283,17 +283,17 @@ namespace TimeTraveler.Models
                 switch(this.Hobby)
                 {
                     case HobbyOption.Hiking:
-                        return "Hiking";
+                        return "Go Hiking";
                     case HobbyOption.Music:
-                        return "Music";
+                        return "Play an instrument";
                     case HobbyOption.Photography:
-                        return "Photography";
+                        return "Do Photography";
                     case HobbyOption.Sport:
-                        return "Sports";
+                        return "Play Sports";
                     case HobbyOption.Travel:
-                        return "Travel";
+                        return "Go Travel";
                     case HobbyOption.WaterSport:
-                        return "Water Sport";
+                        return "Play Water Sports";
                     case HobbyOption.Other:
                         return this.HobbyOther;
                     default:
@@ -338,6 +338,7 @@ namespace TimeTraveler.Models
             this.Name = "Your Uncle Bob";
             this.Grade = 4;
             this.Career = CareerOption.Athlete;
+                        
         }
     }
 
