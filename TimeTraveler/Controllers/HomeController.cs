@@ -310,11 +310,6 @@ namespace TimeTraveler.Controllers
             return View();
         }
 
-        public ActionResult HomeResult()
-        {
-            return View();
-        }
-
         public ActionResult HowWasYourVisit()
         {
             return View();

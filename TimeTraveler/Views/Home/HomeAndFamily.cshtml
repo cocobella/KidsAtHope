@@ -18,62 +18,73 @@
     {
 	<div class="row">
 		<div class="col-md-12">
-			<ul class="family" style="-webkit-padding-start: 10px;">
+			<ul class="select-grid">
 				<li>
 					<input type="radio" name="whereLive" id="cb1" value="downtown"/>
 					<label for="cb1">
-						<span class="row">
+						<div class="select-grid-image">
 							<img src="/images/home_and_family/downtown_house.png" />
-						</span>
-						<span class="row">
+						</div>
+						<div class="select-grid-title">
 							Downtown
-						</span>
+						</div>
 					</label>
 				</li>
 				<li>
 					<input type="radio" name="whereLive" id="cb2" value="mountain"/>
 
 					<label for="cb2">
-						<span class="row"><img src="/images/home_and_family/mountain_house.png" /></span><span class="row">Mountains</span>
+						<div class="select-grid-image">
+                            img src="/images/home_and_family/mountain_house.png" />
+                        </div>
+                        <div class="select-grid-title">
+                            Mountains
+                        </div>
 					</label>
 				</li>
 				<li>
 					<input type="radio" name="whereLive" id="cb3" value="ranch"/>
 					<label for="cb3">
-						<span class="row"><img src="/images/home_and_family/ranch_house.png" /></span>
-						<span class="row">Ranch</span>
+						<div class="select-grid-image">
+                            <img src="/images/home_and_family/ranch_house.png" />
+                        </div>
+						<div class="select-grid-title">
+                            Ranch
+                        </div>
 					</label>
 				</li>
 				<li>
 					<input type="radio" name="whereLive" id="cb4" value="ocean"/>
 					<label for="cb4">
-						<span class="row">
+						<div class="select-grid-image">
 							<img src="/images/home_and_family/sea_house.png" />
-						</span>
-						<span class="row">Sea</span>
+						</div>
+						<div class="select-grid-title">
+                            Sea
+                        </div>
 					</label>
 				</li>
 				<li>
 					<input type="radio" name="whereLive" id="cb5" value="snow"/>
 					<label for="cb5">
-						<span class="row">
+						<div class="select-grid-image">
 							<img src="/images/home_and_family/snow_house.png" />
-						</span>
-						<span class="row">
+						</div>
+						<div class="select-grid-title">
 							Snow
-						</span>
+						</div>
 					</label>
 				</li>
 				<li>
 
 					<input type="radio" name="whereLive" id="cb6" value="suburb"/>
 					<label for="cb6">
-						<span class="row">
+						<div class="select-grid-image">
 							<img src="/images/home_and_family/suburbs_house.png" />
-						</span>
-						<span class="row">
+						</div>
+						<div class="select-grid-title">
 							City
-						</span>
+						</div>
 
 					</label>
 				</li>
@@ -83,11 +94,30 @@
 		</div>
 
         <div class="row">
-            <div class="col-md-12 col-cs-12">
-                <button id="btnGo">Next</button>
+            <div class="pull-right" style="margin-top: 10px;">
+                <button id="btnLetsGo" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#letsGoModal">Continue</button>
             </div>
         </div>
-        }
+        <!-- Modal HTML -->
+        <div id="letsGoModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title">Wow!</h1>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            HomeResult
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
 
 	</div>
+    }
 </div>
