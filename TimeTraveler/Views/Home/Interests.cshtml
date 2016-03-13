@@ -189,27 +189,38 @@
                             </div>
                         </label>
                     </li>
-                    <li>
-                        <input type="checkbox" id="cb16" />
-                        <label for="cb16">
-                            <div class="select-grid-image">
-                                <img src="/images/interests/music.jpg" />
-                            </div>
-                            <div class="select-grid-title">
-                                Music
-                            </div>
-                        </label>
-                    </li>
                 </ul>
+
             </div>
 
         </div>
 
-        <div class="pull-right" style="margin-top: 10px;">
-            <button id="btnBack" class="btn btn-lg">Back</button>
-            <button id="btnGo" class="btn btn-primary btn-lg">Continue</button>
-        </div>
 
+
+        <div class="row">
+            <div class="col-md-12 col-cs-12">
+                <button id="btnLetsGo">Ready? Let's Go</button>
+            </div>
+        </div>
+<!-- Modal HTML -->
+        <div id="letsGoModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        @*<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>*@
+                        <h4 class="modal-title">Wow!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Wow!  These talents text</p>
+                        <p class="text-warning"><small>Click ok to continue</small></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                        @*<button type="button" class="btn btn-primary">Ok</button>*@
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
