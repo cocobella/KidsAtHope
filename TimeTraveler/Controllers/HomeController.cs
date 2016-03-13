@@ -53,6 +53,84 @@ namespace TimeTraveler.Controllers
 			return View();	
 		}
 
+        [HttpPost]
+        public ActionResult HomeAndFamily(string whereLive)
+        {
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+
+            // TODO: Using place holders for the time being
+            switch(whereLive)
+            {
+                case "1":
+                    this.TheTraveler.FutureHome = FutureHomeOption.DowntownCity;
+                    break;
+                case "2":
+                    this.TheTraveler.FutureHome = FutureHomeOption.Mountains;
+                    break;
+                case "3":
+                    this.TheTraveler.FutureHome = FutureHomeOption.Ocean;
+                    break;
+                case "4":
+                    this.TheTraveler.FutureHome = FutureHomeOption.Ranch;
+                    break;
+                case "5":
+                    this.TheTraveler.FutureHome = FutureHomeOption.Snowland;
+                    break;
+                case "6":
+                    this.TheTraveler.FutureHome = FutureHomeOption.Suburb;
+                    break;
+
+            }
+
+            SessionBag.Current.TheTraveler = this.TheTraveler;
+
+            return RedirectToAction("HomeResult");
+        }
+
+        public ActionResult HomeAndFamilyType()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult HomeAndFamilyType(string familyType)
+        {
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+
+            // TODO: Using place holders for the time being
+            switch (familyType)
+            {
+                case "1":
+                    this.TheTraveler.FamilyStyle = FamilyStyleOption.Dad;
+                    break;
+                case "2":
+                    this.TheTraveler.FamilyStyle = FamilyStyleOption.Married;
+                    break;
+                case "3":
+                    this.TheTraveler.FamilyStyle = FamilyStyleOption.Mother;
+                    break;
+                case "4":
+                    this.TheTraveler.FamilyStyle = FamilyStyleOption.Multi_generational;
+                    break;
+                case "5":
+                    this.TheTraveler.FamilyStyle = FamilyStyleOption.SingleMale;
+                    break;
+                case "6":
+                    this.TheTraveler.FamilyStyle = FamilyStyleOption.SingleWoman;
+                    break;
+            }
+
+            SessionBag.Current.TheTraveler = this.TheTraveler;
+
+            // TODO: Make sure to redirect to the proper page
+            return RedirectToAction("");
+        }
+
+        public ActionResult HomeResult()
+        {
+            return View();
+        }       
+
         public ActionResult Interests()
         {
             return View();
