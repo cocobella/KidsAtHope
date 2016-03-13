@@ -1,16 +1,10 @@
 ﻿using System.Web.Mvc;
-using TimeTraveler.Models;
 
 namespace TimeTraveler.Controllers
 {
-
-    
 	public class HomeController : Controller
 	{
-        
-        public TimeTravelerDetail TheTraveler { get; set; }
-
-        public ActionResult Index()
+		public ActionResult Index()
 		{
 			return View();
 		}
@@ -22,19 +16,93 @@ namespace TimeTraveler.Controllers
 			return View();
 		}
 
-		public ActionResult Contact()
+        public ActionResult CareerResult()
+        {
+            return View();
+        }
+
+        public ActionResult CareerType()
+        {
+            return View();
+        }
+
+        public ActionResult CommunityAndServiceType()
+        {
+            return View();
+        }
+
+        public ActionResult CommunityAndServiceTypeResult()
+        {
+            return View();
+        }
+        public ActionResult Contact()
 		{
 			ViewBag.Message = "Your contact page.";
-            
+
 			return View();
 		}
 
-		public ActionResult HomeAndFamily()
+        public ActionResult EducationAndCareer()
+        {
+            return View();
+        }
+
+        public ActionResult EducationResult()
+        {
+            return View();
+        }
+
+        public ActionResult EducationType()
+        {
+            return View();
+        }
+
+        public ActionResult HobbiesAndRecreation()
+        {
+            return View();
+        }
+
+        public ActionResult HobbiesAndRecreationResult()
+        {
+            return View();
+        }
+
+        public ActionResult HomeAndFamily()
 		{
 			return View();	
 		}
 
+        public ActionResult HomeAndFamilyType()
+        {
+            return View();
+        }
+
+        public ActionResult HomeAndFamilyTypeResult()
+        {
+            return View();
+        }
+
+        public ActionResult HomeResult()
+        {
+            return View();
+        }
+
+        public ActionResult HowWasYourVisit()
+        {
+            return View();
+        }
+
         public ActionResult Interests()
+        {
+            return View();
+        }
+
+        public ActionResult Pledge()
+        {
+            return View();
+        }
+
+        public ActionResult TimeTravelersLog()
         {
             return View();
         }
@@ -43,7 +111,6 @@ namespace TimeTraveler.Controllers
         {
             return View();
         }
-
 
 	}
 }
