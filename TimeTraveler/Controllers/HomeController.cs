@@ -130,7 +130,8 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("HobbieAndRecreationType");
+            //return RedirectToAction("HobbiesAndRecreationType");
+            return Json(new { result = "Redirect", url = Url.Action("HobbiesAndRecreationType", "Home") });
         }
 
         public ActionResult Contact()
@@ -225,7 +226,8 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("TimeTravelersLog");
+            //return RedirectToAction("TimeTravelersLog");
+            return Json(new { result = "Redirect", url = Url.Action("TimeTravelersLog", "Home") });
         }
         
         public ActionResult HomeType()

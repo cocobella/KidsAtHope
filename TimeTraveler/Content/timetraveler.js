@@ -22,6 +22,11 @@ $(document).ready(function () {
         window.location = '/Home/HowWasYourVisit';
     });
 
+    $('#btnHowGo').click(function () {
+        window.location = '/';
+    });
+
+    
     
     $('#homeSubmit').click(function () {
         $.ajax({
