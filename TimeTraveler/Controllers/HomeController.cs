@@ -79,12 +79,7 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("CareerResult");
-        }
-
-        public ActionResult CareerResult()
-        {
-            return View();
+            return RedirectToAction("CommunityAndServiceType");
         }
 
         public ActionResult CommunityAndServiceType()
@@ -126,12 +121,7 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("CommunityAndServiceTypeResult");
-        }
-
-        public ActionResult CommunityAndServiceTypeResult()
-        {
-            return View();
+            return RedirectToAction("HobbieAndRecreation");
         }
 
         public ActionResult Contact()
@@ -174,12 +164,7 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("EducationResult");
-        }
-
-        public ActionResult EducationResult()
-        {
-            return View();
+            return RedirectToAction("CareerType");
         }
 
         public ActionResult HobbiesAndRecreation()
@@ -229,13 +214,13 @@ namespace TimeTraveler.Controllers
             return View();
         }
 
-        public ActionResult HomeAndFamily()
+        public ActionResult HomeType()
 		{
 			return View();	
 		}
 
         [HttpPost]
-        public ActionResult HomeAndFamily(string whereLive)
+        public ActionResult HomeType(string whereLive)
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
 
@@ -264,16 +249,16 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("HomeResult");
+            return RedirectToAction("FamilyType");
         }
 
-        public ActionResult HomeAndFamilyType()
+        public ActionResult FamilyType()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult HomeAndFamilyType(string familyType)
+        public ActionResult FamilyType(string familyType)
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
             
@@ -302,17 +287,7 @@ namespace TimeTraveler.Controllers
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
             // TODO: Make sure to redirect to the proper page
-            return RedirectToAction("HomeAndFamilyTypeResult");
-        }
-
-        public ActionResult HomeAndFamilyTypeResult()
-        {
-            return View();
-        }
-
-        public ActionResult HomeResult()
-        {
-            return View();
+            return RedirectToAction("EducationAndCareer");
         }
 
         public ActionResult HowWasYourVisit()
@@ -337,7 +312,7 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("HomeAndFamily");
+            return RedirectToAction("HomeType");
         }
 
         public ActionResult Pledge()

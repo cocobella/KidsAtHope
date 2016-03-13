@@ -22,6 +22,7 @@
         </p>
         <div class="row">
             <div class="col-md-12">
+                <!--  style="-webkit-padding-start: 10px;" -->
                 <ul class="select-grid">
                     <li>
                         <input type="checkbox" id="cb1" value="Find humor" name="interest" />
@@ -189,7 +190,7 @@
                         </label>
                     </li>
                     <li>
-                        <input type="checkbox" id="cb16" value="Music" name="interest" />
+                        <input type="checkbox" id="cb16" />
                         <label for="cb16">
                             <div class="select-grid-image">
                                 <img src="/images/interests/music.jpg" />
@@ -200,32 +201,41 @@
                         </label>
                     </li>
                 </ul>
-
             </div>
 
         </div>
 
-        <div class="pull-right" style="margin-top: 10px;">
-            <button id="btnLetsGo" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#letsGoModal">Continue</button>
-        </div>
+<<<<<<< HEAD
 
+
+        <div class="row">
+            <div class="col-md-12 col-cs-12">
+                <button id="btnLetsGo">Ready? Let's Go</button>
+            </div>
+        </div>
         <!-- Modal HTML -->
         <div id="letsGoModal" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title">Wow!</h1>
+                        @*<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>*@
+                        <h4 class="modal-title">Wow!</h4>
                     </div>
                     <div class="modal-body">
-                        <p>These talents and skills will help you in your future as an adult. We know that you have a
-                        lot more than just the few we listed here. We just want to show you that even with just these skills
-                        and talents you are already preparing for a successful future!</p>
+                        <p>Wow!  These talents text</p>
+                        <p class="text-warning"><small>Click ok to continue</small></p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Continue</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                        @*<button type="button" class="btn btn-primary">Ok</button>*@
                     </div>
                 </div>
             </div>
+=======
+        <div class="pull-right" style="margin-top: 10px;">
+            <button id="btnBack" class="btn btn-lg">Back</button>
+            <button id="btnGo" class="btn btn-primary btn-lg">Continue</button>
+>>>>>>> 35a7151ca9982d20915c102fd0131cb51ad90459
         </div>
     </div>
 
