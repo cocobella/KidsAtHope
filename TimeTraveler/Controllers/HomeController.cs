@@ -41,12 +41,48 @@ namespace TimeTraveler.Controllers
 			return View();
 		}
 
-        public ActionResult CareerResult()
+        public ActionResult CareerType()
         {
             return View();
         }
 
-        public ActionResult CareerType()
+        [HttpPost]
+        public ActionResult CareerType(string career, string otherText)
+        {
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+
+            switch(career)
+            {
+                case "athlete":
+                    this.TheTraveler.Career = CareerOption.Athlete;
+                    break;
+                case "business":
+                    this.TheTraveler.Career = CareerOption.Business;
+                    break;
+                case "designer":
+                    this.TheTraveler.Career = CareerOption.Designer;
+                    break;
+                case "engineer":
+                    this.TheTraveler.Career = CareerOption.Engineer;
+                    break;
+                case "medical":
+                    this.TheTraveler.Career = CareerOption.Medical;
+                    break;
+                case "teacher":
+                    this.TheTraveler.Career = CareerOption.Teacher;
+                    break;
+                case "other":
+                    this.TheTraveler.Career = CareerOption.Other;
+                    this.TheTraveler.CareerOther = otherText.Trim();
+                    break; 
+            }
+
+            SessionBag.Current.TheTraveler = this.TheTraveler;
+
+            return RedirectToAction("CareerResult");
+        }
+
+        public ActionResult CareerResult()
         {
             return View();
         }
@@ -54,6 +90,43 @@ namespace TimeTraveler.Controllers
         public ActionResult CommunityAndServiceType()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult CommunityAndServiceType(string service, string otherText)
+        {
+
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+
+            switch(service)
+            {
+                case "animals":
+                    this.TheTraveler.Community = AidingCommunityOption.Animals;
+                    break;
+                case "children":
+                    this.TheTraveler.Community = AidingCommunityOption.Children;
+                    break;
+                case "coach":
+                    this.TheTraveler.Community = AidingCommunityOption.Coach;
+                    break;
+                case "environment":
+                    this.TheTraveler.Community = AidingCommunityOption.Environment;
+                    break;
+                case "graffiti":
+                    this.TheTraveler.Community = AidingCommunityOption.GraffitiCleanup;
+                    break;
+                case "homeless":
+                    this.TheTraveler.Community = AidingCommunityOption.Homeless;
+                    break;
+                case "other":
+                    this.TheTraveler.Community = AidingCommunityOption.Other;
+                    this.TheTraveler.CommunityOther = otherText.Trim();
+                    break;
+            }
+
+            SessionBag.Current.TheTraveler = this.TheTraveler;
+
+            return RedirectToAction("CommunityAndServiceTypeResult");
         }
 
         public ActionResult CommunityAndServiceTypeResult()
@@ -73,12 +146,38 @@ namespace TimeTraveler.Controllers
             return View();
         }
 
-        public ActionResult EducationResult()
+        public ActionResult EducationType()
         {
             return View();
         }
 
-        public ActionResult EducationType()
+        [HttpPost]
+        public ActionResult EducationType(string education)
+        {
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+
+            switch(education)
+            {
+                case "apprentice":
+                    this.TheTraveler.Education = EducationOption.Apprenticeship;
+                    break;
+                case "career":
+                    this.TheTraveler.Education = EducationOption.CareerSchool;
+                    break;
+                case "community":
+                    this.TheTraveler.Education = EducationOption.CommunityCollege;
+                    break;
+                case "university":
+                    this.TheTraveler.Education = EducationOption.University;
+                    break;
+            }
+
+            SessionBag.Current.TheTraveler = this.TheTraveler;
+
+            return RedirectToAction("EducationResult");
+        }
+
+        public ActionResult EducationResult()
         {
             return View();
         }
@@ -86,6 +185,43 @@ namespace TimeTraveler.Controllers
         public ActionResult HobbiesAndRecreation()
         {
             return View();
+        }
+        
+        [HttpPost] 
+        public ActionResult HobbiesAndRecreation(string hobby, string otherText)
+        {
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+
+            switch(hobby)
+            {
+                case "hiking":
+                    this.TheTraveler.Hobby = HobbyOption.Hiking;
+                    break;
+                case "music":
+                    this.TheTraveler.Hobby = HobbyOption.Music;
+                    break;
+                case "photo":
+                    this.TheTraveler.Hobby = HobbyOption.Photography;
+                    break;
+                case "sport":
+                    this.TheTraveler.Hobby = HobbyOption.Sport;
+                    break;
+                case "travel":
+                    this.TheTraveler.Hobby = HobbyOption.Travel;
+                    break;
+                case "water":
+                    this.TheTraveler.Hobby = HobbyOption.WaterSport;
+                    break;
+                case "other":
+                    this.TheTraveler.Hobby = HobbyOption.Other;
+                    this.TheTraveler.HobbyOther = otherText.Trim();
+                    break;
+                
+            }
+
+            SessionBag.Current.TheTraveler = this.TheTraveler;
+
+            return RedirectToAction("HobbiesAndRecreationResult");
         }
 
         public ActionResult HobbiesAndRecreationResult()
@@ -166,7 +302,7 @@ namespace TimeTraveler.Controllers
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
             // TODO: Make sure to redirect to the proper page
-            return RedirectToAction("");
+            return RedirectToAction("HomeAndFamilyTypeResult");
         }
 
         public ActionResult HomeAndFamilyTypeResult()
