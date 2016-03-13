@@ -8,8 +8,22 @@ $(document).ready(function () {
             $("btnGo").addClass("disabled");
         }
     });
+
     
-    $('#interestSubmit').click(function () {
+    $('#btnWelcomeGo').click(function () {
+        $.ajax({
+            type: "POST",
+            url: '/Home/HomeType',
+            data: {},
+            contentType: "application/json; charset=UTF-8",
+            dataType: "json",
+            success: function (data) {
+                window.location = data.url;
+            }
+        });
+    });
+
+   $('#interestSubmit').click(function () {
         $.ajax({
             type: "POST",
             url: '/Home/Interests',
