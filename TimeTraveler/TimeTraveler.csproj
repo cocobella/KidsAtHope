@@ -458,6 +458,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\HomeAndFamily.cshtml" />
     <Content Include="Views\Home\Interests.cshtml" />
+    <Content Include="Views\Home\Welcome.cshtml" />
+    <Content Include="Views\Home\HomeResult.cshtml" />
+    <Content Include="Views\Home\HomeAndFamilyType.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

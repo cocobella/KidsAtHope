@@ -57,5 +57,12 @@ namespace TimeTraveler.Controllers
         {
             return View();
         }
+
+        public ActionResult Welcome()
+        {
+            return View();
+        }
+
+
 	}
 }
