@@ -332,7 +332,7 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("HomeAndFamily");
+            return RedirectToAction("HomeType");
         }
 
         public ActionResult Pledge()
