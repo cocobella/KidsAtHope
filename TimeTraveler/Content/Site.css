@@ -23,18 +23,22 @@ textarea {
     max-width: 280px;
 }
 
+.interests ul,
 .family ul {
   list-style-type: none;
 }
 
+.interests li,
 .family li {
   display: inline-block;
 }
 
+.interests input[type="checkbox"][id^="cb"],
 .family input[type="checkbox"][id^="cb"] {
   display: none;
 }
 
+.interests label,
 .family label {
   border: 1px solid #fff;
   padding-right: 20px;
@@ -45,6 +49,7 @@ textarea {
   cursor: pointer;
 }
 
+.interests label:before,
 .family label:before {
   background-color: white;
   color: white;
@@ -63,22 +68,30 @@ textarea {
   transform: scale(0);
 }
 
+.interests label img{
+  height:80px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
 .family label img {
   height: 155px;
   transition-duration: 0.2s;
   transform-origin: 50% 50%;
 }
 
+.interests :checked + label,
 .family :checked + label {
   border-color: #ddd;
 }
 
+.interests :checked + label:before,
 .family :checked + label:before {
   content: "✓";
   background-color: grey;
   transform: scale(1);
 }
 
+.interests :checked + label img
 .family :checked + label img {
     transform: scale(0.8);
     box-shadow: 0 0 5px #333;
