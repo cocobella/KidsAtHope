@@ -229,13 +229,13 @@ namespace TimeTraveler.Controllers
             return View();
         }
 
-        public ActionResult HomeAndFamily()
+        public ActionResult HomeType()
 		{
 			return View();	
 		}
 
         [HttpPost]
-        public ActionResult HomeAndFamily(string whereLive)
+        public ActionResult HomeType(string whereLive)
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
 
@@ -267,13 +267,13 @@ namespace TimeTraveler.Controllers
             return RedirectToAction("HomeResult");
         }
 
-        public ActionResult HomeAndFamilyType()
+        public ActionResult FamilyType()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult HomeAndFamilyType(string familyType)
+        public ActionResult FamilyType(string familyType)
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
             
