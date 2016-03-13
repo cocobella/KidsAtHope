@@ -13,7 +13,11 @@ $(document).ready(function () {
     $('#btnWelcomeGo').click(function () {
         window.location = '/Home/HomeType';
     });
-    
+
+    $('#btnEduCarGo').click(function () {
+        window.location = '/Home/EducationType';
+    });
+
     
     $('#homeSubmit').click(function () {
         $.ajax({
@@ -41,6 +45,19 @@ $(document).ready(function () {
         });
     });
 
+    $('#educationSubmit').click(function () {
+        $.ajax({
+            type: "POST",
+            url: '/Home/EducationType',
+            data: JSON.stringify(getItem()),
+            contentType: "application/json; charset=UTF-8",
+            dataType: "json",
+            success: function (data) {
+                window.location = data.url;
+            }
+        });
+    });
+
    $('#interestSubmit').click(function () {
         $.ajax({
             type: "POST",
@@ -53,7 +70,7 @@ $(document).ready(function () {
             }
         });
     });
-        
+   
 
 
 });
