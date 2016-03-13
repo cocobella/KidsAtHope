@@ -23,6 +23,11 @@ textarea {
     max-width: 280px;
 }
 
+h1 {
+    color: rgb(255, 150, 1);
+    margin-top: 0;
+}
+
 .interests ul,
 .family ul {
   list-style-type: none;
@@ -99,7 +104,7 @@ textarea {
 }
  
 footer{
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .mainbody{
@@ -147,4 +152,5 @@ a.logo:focus {
     min-height: 400px;
     background: #000;
     margin: 20px 0;
+    padding: 20px;
 }
