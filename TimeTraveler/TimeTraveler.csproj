@@ -467,7 +467,6 @@
     <Content Include="Views\Home\CareerType.cshtml" />
     <Content Include="Views\Home\CommunityAndServiceType.cshtml" />
     <Content Include="Views\Home\HobbiesAndRecreationType.cshtml" />
-    <Content Include="Views\Home\HobbiesAndRecreationResult.cshtml" />
     <Content Include="Views\Home\HowWasYourVisit.cshtml" />
     <Content Include="Views\Home\TimeTravelersLog.cshtml" />
     <Content Include="Views\Home\Pledge.cshtml" />
