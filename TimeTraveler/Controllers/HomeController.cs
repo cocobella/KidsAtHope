@@ -123,7 +123,7 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("HobbieAndRecreation");
+            return RedirectToAction("HobbieAndRecreationType");
         }
 
         public ActionResult Contact()
@@ -170,13 +170,13 @@ namespace TimeTraveler.Controllers
             return RedirectToAction("CareerType");
         }
 
-        public ActionResult HobbiesAndRecreation()
+        public ActionResult HobbiesAndRecreationType()
         {
             return View();
         }
         
         [HttpPost] 
-        public ActionResult HobbiesAndRecreation(string hobby, string otherText)
+        public ActionResult HobbiesAndRecreationType(string hobby, string otherText)
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
             if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
@@ -210,14 +210,9 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("HobbiesAndRecreationResult");
+            return RedirectToAction("TimeTravelersLog");
         }
-
-        public ActionResult HobbiesAndRecreationResult()
-        {
-            return View();
-        }
-
+        
         public ActionResult HomeType()
 		{
 			return View();	
