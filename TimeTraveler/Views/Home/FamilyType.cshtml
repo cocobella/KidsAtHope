@@ -1,43 +1,132 @@
 ﻿@{
-    ViewBag.Title = "Family Type";
+    ViewBag.Title = "Home and Family";
 }
 
-<div class="row">
-    <div class="col-md-12 col-xs-12">
-        <h1>Home and Family (continued)</h1>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-12 col-xs-12">
-        <p>
-            Content
-        </p>
-        
-        <div class="row">
-            <div class="pull-right" style="margin-top: 10px;">
-                <button id="btnLetsGo" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#letsGoModal">Continue</button>
-            </div>
+<div class="page-header">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <h4>Destination 1:</h4>
+            <h1>Home and Family</h1>
         </div>
-        <!-- Modal HTML -->
-        <div id="letsGoModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title">FamilyResult</h1>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            Fun Isn't It? FamilyResult text
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Continue</button>
-                    </div>
+        <div class="col-xs-12 col-md-6" style="height: 60px;">
+            <div id="destination-path">
+                <div id="destination-path-time-traveler" style="left: 50px;">
+                    <img src="~/images/gif/timetraveler_small.gif" />
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
+<div style="margin-bottom: 10px;">
+    <strong>Here are some of the options you can begin to think about for your future family life. Choose which one you think would make you happiest.</strong>
+</div>
+
+@using (Html.BeginForm("HomeAndFamily", "Home", FormMethod.Post))
+{
+    <ul class="select-grid select-grid-large">
+        <li>
+            <input type="radio" name="whereLive" id="cb1" value="downtown" />
+            <label for="cb1">
+                <div class="select-grid-image">
+                    <img src="/images/home_and_family/marriage_family.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Married
+                </div>
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="whereLive" id="cb2" value="mountain" />
+
+            <label for="cb2">
+                <div class="select-grid-image">
+                    <img src="/images/home_and_family/mom_pic_family.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Being a Mom
+                </div>
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="whereLive" id="cb3" value="ranch" />
+            <label for="cb3">
+                <div class="select-grid-image">
+                    <img src="/images/home_and_family/multi_generation_family.png" />
+                </div>
+                <div class="select-grid-title">
+                    Living in a multi-generational household
+                </div>
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="whereLive" id="cb4" value="ocean" />
+            <label for="cb4">
+                <div class="select-grid-image">
+                    <img src="/images/home_and_family/single_guys_family.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Being a Single Man
+                </div>
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="whereLive" id="cb5" value="snow" />
+            <label for="cb5">
+                <div class="select-grid-image">
+                    <img src="/images/home_and_family/single_women_family.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Being a Single Woman
+                </div>
+            </label>
+        </li>
+        <li>
+
+            <input type="radio" name="whereLive" id="cb6" value="suburb" />
+            <label for="cb6">
+                <div class="select-grid-image">
+                    <img src="/images/home_and_family/son_father_family.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Being a Dad
+                </div>
+
+            </label>
+        </li>
+    </ul>
+
+    <div class="pull-right" style="margin-top: 10px;">
+        <button id="btnLetsGo" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#letsGoModal">Continue</button>
+    </div>
+    <div class="clearfix"></div>
+
+    <!-- Modal HTML -->
+    <div id="letsGoModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">Fun, isn't it?</h1>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        It may seem funny now to think about the type of family you would like
+                        to have when you grow up, but in order to be a Time Traveler it is
+                        important.
+                    </p>
+                    <p>
+                        Your family choice was <em>&lt;selection&gt;</em>, check out the video below to see what that looks like.
+                    </p>
+                    <!-- Video goes here -->
+                    <p>
+                        These are just a few different kinds of families – you can imagine
+                        whatever kind of family you would want to be a part of.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}

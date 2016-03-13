@@ -2,122 +2,131 @@
 	ViewBag.Title = "Home and Family";
 }
 
-<div class="container">
-	<div class="page-header">
-		<h2>Destination 1: Home and Family</h2>
-	</div>
-	<div class="row">
-
-
-		<div class="col-md-12">
-			Please select one of the options as to where you would like to live in the future?
-		</div>
-	</div>
-
-    @using(Html.BeginForm("HomeAndFamily", "Home", FormMethod.Post))
-    {
-	<div class="row">
-		<div class="col-md-12">
-			<ul class="select-grid">
-				<li>
-					<input type="radio" name="whereLive" id="cb1" value="downtown"/>
-					<label for="cb1">
-						<div class="select-grid-image">
-							<img src="/images/home_and_family/downtown_house.png" />
-						</div>
-						<div class="select-grid-title">
-							Downtown
-						</div>
-					</label>
-				</li>
-				<li>
-					<input type="radio" name="whereLive" id="cb2" value="mountain"/>
-
-					<label for="cb2">
-						<div class="select-grid-image">
-                            img src="/images/home_and_family/mountain_house.png" />
-                        </div>
-                        <div class="select-grid-title">
-                            Mountains
-                        </div>
-					</label>
-				</li>
-				<li>
-					<input type="radio" name="whereLive" id="cb3" value="ranch"/>
-					<label for="cb3">
-						<div class="select-grid-image">
-                            <img src="/images/home_and_family/ranch_house.png" />
-                        </div>
-						<div class="select-grid-title">
-                            Ranch
-                        </div>
-					</label>
-				</li>
-				<li>
-					<input type="radio" name="whereLive" id="cb4" value="ocean"/>
-					<label for="cb4">
-						<div class="select-grid-image">
-							<img src="/images/home_and_family/sea_house.png" />
-						</div>
-						<div class="select-grid-title">
-                            Sea
-                        </div>
-					</label>
-				</li>
-				<li>
-					<input type="radio" name="whereLive" id="cb5" value="snow"/>
-					<label for="cb5">
-						<div class="select-grid-image">
-							<img src="/images/home_and_family/snow_house.png" />
-						</div>
-						<div class="select-grid-title">
-							Snow
-						</div>
-					</label>
-				</li>
-				<li>
-
-					<input type="radio" name="whereLive" id="cb6" value="suburb"/>
-					<label for="cb6">
-						<div class="select-grid-image">
-							<img src="/images/home_and_family/suburbs_house.png" />
-						</div>
-						<div class="select-grid-title">
-							City
-						</div>
-
-					</label>
-				</li>
-
-			</ul>
-
-		</div>
-
-        <div class="row">
-            <div class="pull-right" style="margin-top: 10px;">
-                <button id="btnLetsGo" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#letsGoModal">Continue</button>
-            </div>
+<div class="page-header">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <h4>Destination 1:</h4>
+            <h1>Home and Family</h1>
         </div>
-        <!-- Modal HTML -->
-        <div id="letsGoModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title">HomeResult</h1>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            HomeResult text
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Continue</button>
-                    </div>
+        <div class="col-xs-12 col-md-6" style="height: 60px;">
+            <div id="destination-path">
+                <div id="destination-path-time-traveler">
+                    <img src="~/images/gif/timetraveler_small.gif" />
                 </div>
             </div>
         </div>
-        
-
-	</div>
-    }
+    </div>
 </div>
+
+<div style="margin-bottom: 10px;">
+    <strong>Where you would like to live in the future?</strong>
+</div>
+
+@using(Html.BeginForm("HomeAndFamily", "Home", FormMethod.Post))
+{
+<ul class="select-grid select-grid-large">
+	<li>
+		<input type="radio" name="whereLive" id="cb1" value="downtown"/>
+		<label for="cb1">
+			<div class="select-grid-image">
+				<img src="/images/home_and_family/downtown_house.png" />
+			</div>
+			<div class="select-grid-title">
+				Downtown
+			</div>
+		</label>
+	</li>
+	<li>
+		<input type="radio" name="whereLive" id="cb2" value="mountain"/>
+
+		<label for="cb2">
+			<div class="select-grid-image">
+                <img src="/images/home_and_family/mountain_house.png" />
+            </div>
+            <div class="select-grid-title">
+                Mountains
+            </div>
+		</label>
+	</li>
+	<li>
+		<input type="radio" name="whereLive" id="cb3" value="ranch"/>
+		<label for="cb3">
+			<div class="select-grid-image">
+                <img src="/images/home_and_family/ranch_house.png" />
+            </div>
+			<div class="select-grid-title">
+                Ranch
+            </div>
+		</label>
+	</li>
+	<li>
+		<input type="radio" name="whereLive" id="cb4" value="ocean"/>
+		<label for="cb4">
+			<div class="select-grid-image">
+				<img src="/images/home_and_family/sea_house.png" />
+			</div>
+			<div class="select-grid-title">
+                Sea
+            </div>
+		</label>
+	</li>
+	<li>
+		<input type="radio" name="whereLive" id="cb5" value="snow"/>
+		<label for="cb5">
+			<div class="select-grid-image">
+				<img src="/images/home_and_family/snow_house.png" />
+			</div>
+			<div class="select-grid-title">
+				Snow
+			</div>
+		</label>
+	</li>
+	<li>
+
+		<input type="radio" name="whereLive" id="cb6" value="suburb"/>
+		<label for="cb6">
+			<div class="select-grid-image">
+				<img src="/images/home_and_family/suburbs_house.png" />
+			</div>
+			<div class="select-grid-title">
+				City
+			</div>
+
+		</label>
+	</li>
+</ul>
+
+<div class="pull-right" style="margin-top: 10px;">
+    <button id="btnLetsGo" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#letsGoModal">Continue</button>
+</div>
+<div class="clearfix"></div>
+
+<!-- Modal HTML -->
+<div id="letsGoModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">Wow <span class="visitorName">&lt;name&gt;</span>!</h1>
+            </div>
+            <div class="modal-body">
+                <p>
+                    Great job imagining where you would like to live when you grow up!
+                    These are just a few of the thousands of places you could live – and
+                    you can always change your mind if you visit a new place that you think
+                    would be a wonderful place to live!
+                </p>
+                <p>
+                    You chose to live <span id="modalHomeChoice" style="font-weight:bold; font-family: 'Bradley Hand ITC'; color: #ff9601;">  </span>, check out the video below to see what that looks like.
+</p>
+                <video id="modalHomeVideo" width="400" height="300" src="" controls />
+                <p>
+                    Now let’s take a look at what kind of family you would like to have in the future...
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Continue</button>
+            </div>
+        </div>
+    </div>
+</div>
+}
