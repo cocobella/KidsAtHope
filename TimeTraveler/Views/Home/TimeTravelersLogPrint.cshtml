@@ -1,0 +1,99 @@
+﻿@model TimeTraveler.Models.TimeTravelerDetail
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - The Time Traveler App</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1><span class="visitorName">@Model.Name</span>'s Time Traveler Log</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <p>
+                    Hi <span class="visitorName">@Model.Name</span>,
+                    Wow, what an adventure! You visited your future. Not
+                    everyone knows how to do that, but you do. As a Time Traveler
+                    you discovered that you have many of the skills and talents you
+                    will need on your journey to your destinations.
+                </p>
+                <p>
+                    You listed:
+                </p>
+                <ul>
+                    <li><em>&lt;Interest 1&gt;</em></li>
+                    <li><em>&lt;Interest 2&gt;</em></li>
+                    <li><em>&lt;Interest 3&gt;</em></li>
+                    <li><em>&lt;Interest 4&gt;</em></li>
+                    <li><em>&lt;Interest 5&gt;</em></li>
+                </ul>
+                <p>
+                    Take a moment and think how your talents will be of
+                    importance to you. As importantly, you will continue to get
+                    better with each of your talents and you will pick up more on
+                    the way.
+                </p>
+                <p>
+                    Remember, the harder you try the better you will get. So
+                    always try your best in everything you do. Never Give Up.
+                    Every Time Traveler keeps a log of their adventures - Here is
+                    your Log:
+                </p>
+                <ul>
+                    <li>
+                        Today you time traveled to Home and Family and you said
+                        you would like to live <em>&lt;home type&gt;</em>
+                    </li>
+                    <li>
+                        You see yourself <em>&lt;family type&gt;</em>
+                    </li>
+                    <li>
+                        You also visited your future Education and Career and after
+                        high school graduation, you decided to go to <em>&lt;education type&gt;</em>
+                    </li>
+                    <li>
+                        Your career choice was to be a <em>&lt;career type&gt;</em>
+                    </li>
+                    <li>
+                        You would like to serve your Community by <em>&lt;community and service type&gt;</em>
+                    </li>
+                    <li>
+                        Finally, as a Hobby or for Recreation you would like to <em>&lt;hobbies and recreation type&gt;</em>
+                    </li>
+                </ul>
+                <p>
+                    We are proud that you've become an official Time Traveler.
+                </p>
+                <p>
+                    Remember, you can time travel whenever you want.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script type="text/javascript">
+        $(function () {
+            window.print();
+        });
+    </script>
+
+    <link href='https://fonts.googleapis.com/css?family=Jura:400,600' rel='stylesheet' type='text/css'>
+</body>
+</html>
