@@ -33,14 +33,15 @@
                 </p>
                 <p>
                     You listed:
-                </p>
-                <ul>
-                    <li><em>&lt;Interest 1&gt;</em></li>
-                    <li><em>&lt;Interest 2&gt;</em></li>
-                    <li><em>&lt;Interest 3&gt;</em></li>
-                    <li><em>&lt;Interest 4&gt;</em></li>
-                    <li><em>&lt;Interest 5&gt;</em></li>
-                </ul>
+                    </p>
+                    <ul>
+                        @{ foreach (var str in Model.Likes)
+                            {
+                                <li><em>@str</em></li>
+                            }
+                        }
+
+                    </ul>
                 <p>
                     Take a moment and think how your talents will be of
                     importance to you. As importantly, you will continue to get
@@ -56,23 +57,23 @@
                 <ul>
                     <li>
                         Today you time traveled to Home and Family and you said
-                        you would like to live <em>&lt;home type&gt;</em>
+                        you would like to live <em>@Model.FutureHomeToText</em>
                     </li>
                     <li>
-                        You see yourself <em>&lt;family type&gt;</em>
+                        You see yourself <em>@Model.FamilyStyleToText</em>
                     </li>
                     <li>
                         You also visited your future Education and Career and after
-                        high school graduation, you decided to go to <em>&lt;education type&gt;</em>
+                        high school graduation, you decided to go to <em>@Model.EducationToText</em>
                     </li>
                     <li>
-                        Your career choice was to be a <em>&lt;career type&gt;</em>
+                        Your career choice was to be a <em>@Model.CareerToText</em>
                     </li>
                     <li>
-                        You would like to serve your Community by <em>&lt;community and service type&gt;</em>
+                        You would like to serve your Community by <em>@Model.CommunityToText</em>
                     </li>
                     <li>
-                        Finally, as a Hobby or for Recreation you would like to <em>&lt;hobbies and recreation type&gt;</em>
+                        Finally, as a Hobby or for Recreation you would like to <em>@Model.HobbyToText</em>
                     </li>
                 </ul>
                 <p>
