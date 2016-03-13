@@ -1,43 +1,130 @@
 ﻿@model TimeTraveler.Models.TimeTravelerDetail
 
 @{
-    ViewBag.Title = "Welcome";
+    ViewBag.Title = "Home and Family";
 }
 
-<div class="row">
-    <div class="col-md-12 col-xs-12">
-        <h1>Welcome to the Time Machine!</h1>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-12 col-xs-12">
-        <p>
-            Content
-        </p>
-        
-        <div class="pull-right" style="margin-top: 10px;">
-            <button id="btnLetsGo" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#letsGoModal">Continue</button>
+<div class="page-header">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <h4>Destination 2:</h4>
+            <h1>Education and Career</h1>
         </div>
-
-        <!-- Modal HTML -->
-        <div id="letsGoModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title">Career Result</h1>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            Career Result text
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Continue</button>
-                    </div>
+        <div class="col-xs-12 col-md-6" style="height: 60px;">
+            <div id="destination-path">
+                <div id="destination-path-time-traveler" style="left: 140px;">
+                    <img src="~/images/gif/timetraveler_small.gif" />
                 </div>
             </div>
         </div>
-
     </div>
 </div>
+
+<div style="margin-bottom: 10px;">
+    <strong>Ready to think about a career? This should be fun and interesting.</strong>
+</div>
+
+@using (Html.BeginForm("EducationAndCareer", "Home", FormMethod.Post))
+{
+    <ul class="select-grid select-grid-large">
+        <li>
+            <input type="radio" name="whereLive" id="cb1" value="Designer" />
+            <label for="cb1">
+                <div class="select-grid-image">
+                    <img src="/images/education_and_career/art.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Designer
+                </div>
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="whereLive" id="cb2" value="Athlete" />
+
+            <label for="cb2">
+                <div class="select-grid-image">
+                    <img src="/images/education_and_career/athletes.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Athlete
+                </div>
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="whereLive" id="cb3" value="Teacher" />
+            <label for="cb3">
+                <div class="select-grid-image">
+                    <img src="/images/education_and_career/education.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Teacher
+                </div>
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="whereLive" id="cb4" value="Engineer" />
+            <label for="cb4">
+                <div class="select-grid-image">
+                    <img src="/images/education_and_career/engineer.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Engineer
+                </div>
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="whereLive" id="cb5" value="Business Person" />
+            <label for="cb5">
+                <div class="select-grid-image">
+                    <img src="/images/education_and_career/manager_and_business_person.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Business Person
+                </div>
+            </label>
+        </li>
+        <li>
+
+            <input type="radio" name="whereLive" id="cb6" value="Doctor/Nurse" />
+            <label for="cb6">
+                <div class="select-grid-image">
+                    <img src="/images/education_and_career/medical_careers.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Doctor/Nurse
+                </div>
+            </label>
+        </li>
+    </ul>
+
+    <div class="pull-right" style="margin-top: 10px;">
+        <button id="btnLetsGo" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#letsGoModal">Continue</button>
+    </div>
+    <div class="clearfix"></div>
+
+    <!-- Modal HTML -->
+    <div id="letsGoModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">&lt;name&gt;,</h1>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Enjoying your work is important as is your education.
+                    </p>
+                    <p>
+                        Good Luck! It’s  fun to visit your future isn’t it?
+                    </p>
+                    <p>
+                        You chose to be <em>&lt;selection&gt;</em>, check out the video below to see what that looks like.
+                    </p>
+                    <!-- Video goes here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
