@@ -121,12 +121,7 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("CommunityAndServiceTypeResult");
-        }
-
-        public ActionResult CommunityAndServiceTypeResult()
-        {
-            return View();
+            return RedirectToAction("HobbieAndRecreation");
         }
 
         public ActionResult Contact()
