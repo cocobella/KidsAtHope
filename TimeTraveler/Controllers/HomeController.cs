@@ -334,7 +334,14 @@ namespace TimeTraveler.Controllers
 
         public ActionResult TimeTravelersLog()
         {
-            return View();
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            return View("TimeTravelersLog", this.TheTraveler);
+        }
+
+        public ActionResult TimeTravelersLogPrint()
+        {
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            return View("TimeTravelersLogPrint", this.TheTraveler);
         }
 
         public ActionResult Welcome()

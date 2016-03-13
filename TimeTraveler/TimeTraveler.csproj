@@ -470,6 +470,7 @@
     <Content Include="Views\Home\HowWasYourVisit.cshtml" />
     <Content Include="Views\Home\TimeTravelersLog.cshtml" />
     <Content Include="Views\Home\Pledge.cshtml" />
+    <Content Include="Views\Home\TimeTravelersLogPrint.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
