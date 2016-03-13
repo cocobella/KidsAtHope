@@ -19,11 +19,11 @@ namespace TimeTraveler.Controllers
 		}
 
         [HttpPost]
-        public ActionResult Index(string name, string grade)
+        public ActionResult Index(string theName, string grade)
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
             if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
-            this.TheTraveler.Name = name;
+            this.TheTraveler.Name = theName;
 
             int g = 0;
             int.TryParse(grade, out g);
@@ -56,6 +56,21 @@ namespace TimeTraveler.Controllers
         public ActionResult Interests()
         {
             return View();
+        }
+        
+        [HttpPost]
+        public ActionResult Interests(string[] interest)
+        {
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+
+            foreach(string s in interest)
+            {
+                this.TheTraveler.Likes.Add(s);
+            }
+
+            SessionBag.Current.TheTraveler = this.TheTraveler;
+
+            return RedirectToAction("HomeAndFamily");
         }
 
         public ActionResult Welcome()
