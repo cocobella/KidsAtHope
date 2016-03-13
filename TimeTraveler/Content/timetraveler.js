@@ -19,8 +19,9 @@ $(document).ready(function () {
             success: function (data) {
                 window.location =data.url;
             }
-
         });
+    });
+        
 
     $('input[name="whereLive"]').click(function () {
 
@@ -58,12 +59,14 @@ $(document).ready(function () {
 
 });
 
-function getInterests(){
-    var interests=[];
-    $('input:checked').each(function (i) {
-        interests[i] = $(this).val();
-    });
-    return interests
+
+    function getInterests(){
+        var interests=[];
+        $('input:checked').each(function (i) {
+            interests[i] = $(this).val();
+        });
+        return interests
+    }
 
 
-}
+
