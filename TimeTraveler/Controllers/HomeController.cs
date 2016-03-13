@@ -141,7 +141,10 @@ namespace TimeTraveler.Controllers
 
         public ActionResult EducationType()
         {
-            return View();
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
+
+            return View(this.TheTraveler);
         }
 
         [HttpPost]
