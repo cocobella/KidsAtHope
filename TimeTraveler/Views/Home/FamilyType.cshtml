@@ -28,7 +28,7 @@
 {
     <ul class="select-grid select-grid-large">
         <li>
-            <input type="radio" name="whereLive" id="cb1" value="downtown" />
+            <input type="radio" name="familyType" id="cb1" value="married" />
             <label for="cb1">
                 <div class="select-grid-image">
                     <img src="/images/home_and_family/marriage_family.jpg" />
@@ -39,7 +39,7 @@
             </label>
         </li>
         <li>
-            <input type="radio" name="whereLive" id="cb2" value="mountain" />
+            <input type="radio" name="familyType" id="cb2" value="mother" />
 
             <label for="cb2">
                 <div class="select-grid-image">
@@ -51,7 +51,7 @@
             </label>
         </li>
         <li>
-            <input type="radio" name="whereLive" id="cb3" value="ranch" />
+            <input type="radio" name="familyType" id="cb3" value="multi" />
             <label for="cb3">
                 <div class="select-grid-image">
                     <img src="/images/home_and_family/multi_generation_family.png" />
@@ -62,7 +62,7 @@
             </label>
         </li>
         <li>
-            <input type="radio" name="whereLive" id="cb4" value="ocean" />
+            <input type="radio" name="familyType" id="cb4" value="man" />
             <label for="cb4">
                 <div class="select-grid-image">
                     <img src="/images/home_and_family/single_guys_family.jpg" />
@@ -73,7 +73,7 @@
             </label>
         </li>
         <li>
-            <input type="radio" name="whereLive" id="cb5" value="snow" />
+            <input type="radio" name="familyType" id="cb5" value="woman" />
             <label for="cb5">
                 <div class="select-grid-image">
                     <img src="/images/home_and_family/single_women_family.jpg" />
@@ -85,7 +85,7 @@
         </li>
         <li>
 
-            <input type="radio" name="whereLive" id="cb6" value="suburb" />
+            <input type="radio" name="familyType" id="cb6" value="dad" />
             <label for="cb6">
                 <div class="select-grid-image">
                     <img src="/images/home_and_family/son_father_family.jpg" />
@@ -117,9 +117,9 @@
                         important.
                     </p>
                     <p>
-                        Your family choice was <em>&lt;selection&gt;</em>, check out the video below to see what that looks like.
+                        Your family choice was <span id="modalFamilyChoice" style="font-weight:bold; font-family: 'Bradley Hand ITC'; color: #ff9601;">  </span>, check out the video below to see what that looks like.
                     </p>
-                    <!-- Video goes here -->
+                    <video id="modalFamilyVideo" width="400" height="300" src="" controls />
                     <p>
                         These are just a few different kinds of families – you can imagine
                         whatever kind of family you would want to be a part of.
