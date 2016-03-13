@@ -135,7 +135,8 @@ namespace TimeTraveler.Controllers
 
         public ActionResult EducationAndCareer()
         {
-            return View();
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            return View(this.TheTraveler);
         }
 
         public ActionResult EducationType()
@@ -253,12 +254,14 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("FamilyType");
+            //return RedirectToAction("FamilyType");
+            return Json(new { result = "Redirect", url = Url.Action("FamilyType", "Home") });
         }
 
         public ActionResult FamilyType()
         {
-            return View();
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            return View(this.TheTraveler);
         }
 
         [HttpPost]
@@ -291,8 +294,8 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            // TODO: Make sure to redirect to the proper page
-            return RedirectToAction("EducationAndCareer");
+            //return RedirectToAction("EducationAndCareer");
+            return Json(new { result = "Redirect", url = Url.Action("EducationAndCareer", "Home") });
         }
 
         public ActionResult HowWasYourVisit()

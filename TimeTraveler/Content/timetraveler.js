@@ -22,6 +22,19 @@ $(document).ready(function () {
             }
         });
     });
+    
+    $('#familySubmit').click(function () {
+        $.ajax({
+            type: "POST",
+            url: '/Home/Interests',
+            data: JSON.stringify(getFamily()),
+            contentType: "application/json; charset=UTF-8",
+            dataType: "json",
+            success: function (data) {
+                window.location = data.url;
+            }
+        });
+    });
 
    $('#interestSubmit').click(function () {
         $.ajax({
@@ -73,13 +86,18 @@ $(document).ready(function () {
 
 });
 
-
     function getInterests(){
         var interests=[];
         $('input:checked').each(function (i) {
             interests[i] = $(this).val();
         });
         return interests
+    }
+
+    function getFamily() {
+        var family;
+        family = $('input:checked').val();
+        return family
     }
 
 
