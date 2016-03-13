@@ -1,10 +1,16 @@
 ﻿using System.Web.Mvc;
+using TimeTraveler.Models;
 
 namespace TimeTraveler.Controllers
 {
+
+    
 	public class HomeController : Controller
 	{
-		public ActionResult Index()
+        
+        public TimeTravelerDetail TheTraveler { get; set; }
+
+        public ActionResult Index()
 		{
 			return View();
 		}
@@ -19,7 +25,7 @@ namespace TimeTraveler.Controllers
 		public ActionResult Contact()
 		{
 			ViewBag.Message = "Your contact page.";
-
+            
 			return View();
 		}
 
