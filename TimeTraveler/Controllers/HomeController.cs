@@ -31,7 +31,7 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("HomeAndFamily");
+            return RedirectToAction("Interests");
         }
 
 		public ActionResult About()
