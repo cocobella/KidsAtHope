@@ -16,7 +16,8 @@
             fantastic adventure. We are headed to your future.
             That’s right, your future. Very cool, don’t you think?
         </p>
-        <form class="form-inline" style="margin-top:40px;">
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "form-inline", @style = "margin-top:40px;" }))
+        {
             <div class="form-group">
                 <label for="txtFirstName">
                     Your First Name
@@ -45,7 +46,7 @@
             <div>
                 <button id="btnGo" class="btn btn-primary btn-lg" style="width: 100%; margin: 20px 0;">Ready? Let's Go!</button>
             </div>
-        </form>
+        }
     </div>
     <div class="col-xs-12 col-sm-5 col-md-4 text-center">
         <img src="~/images/png/tt_image_front_2.png" />
