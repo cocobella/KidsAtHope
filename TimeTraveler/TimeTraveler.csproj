@@ -464,7 +464,6 @@
     <Content Include="Views\Home\EducationAndCareer.cshtml" />
     <Content Include="Views\Home\EducationType.cshtml" />
     <Content Include="Views\Home\CareerType.cshtml" />
-    <Content Include="Views\Home\CareerResult.cshtml" />
     <Content Include="Views\Home\CommunityAndServiceType.cshtml" />
     <Content Include="Views\Home\CommunityAndServiceTypeResult.cshtml" />
     <Content Include="Views\Home\HobbiesAndRecreation.cshtml" />

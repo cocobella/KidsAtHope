@@ -79,12 +79,7 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("CareerResult");
-        }
-
-        public ActionResult CareerResult()
-        {
-            return View();
+            return RedirectToAction("CommunityAndServiceType");
         }
 
         public ActionResult CommunityAndServiceType()
