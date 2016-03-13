@@ -8,35 +8,40 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body class="mainbody">
-    <div class="row">
-        <div class="col-md-12 col-xs-12 title">
-                <a class="logo" href="Title.aspx"><font color="white">T</font><strong class="yellow">i</strong><font color="white">me</font></a>
-                <span><font class="traveler" color="white">traveler</font></span>
+<body style="background-color: black;">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <a class="logo" href="/">
+                    <font color="white">T</font><strong class="yellow">i</strong><font color="white">me</font>
+                    <span><font class="traveler" color="white">traveler</font></span>
+                </a>
+            </div>
         </div>
     </div>
-    <div>
-        <div class="backpiece">
-            <div class="mainContent container">
+    <div class="backpiece">
+        <div class="container">
+            <div class="mainContent">
                 @RenderBody()
             </div>
         </div>
-        <hr />
+    </div>
+    <div class="container">
         <footer>
             <div class="row">
-                    <div class="col-xs-6 col-md-4">
-                        <div id="img1"><img src="images/Kids_at_Hope.png" alt="Kids At Hope" /></div>
-                    </div>
-                    <div class="col-xs-6 col-md-4">
-                        <div style="vertical-align:middle"><font style="font-size:125%" color="white">Developed in partnership with the University of Arizona, Eller MIS Solutions Center</font></div>
-                        <br />
-                        <div style="vertical-align:middle"><font style="font-size:160%" color="white">Kids at Hope &copy;2013</font> <a href="#"><font color="white">Privacy Policy</font></a></div>
-                    </div>
-                    <div class="col-xs-6 col-md-4">
-                        <ul >
-                            <li ><a href="https://www.facebook.com/kidsathope" style="display: block; width: 60px; height: 45px; background:url(../images/social-icons.png) left top no-repeat; background-image:url(../images/social-icons.png)"></a></li>
-                        </ul>
-                    </div>
+                <div class="col-xs-6 col-md-4">
+                    <div id="img1"><img src="images/Kids_at_Hope.png" alt="Kids At Hope" /></div>
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <div style="vertical-align:middle"><font style="font-size:125%" color="white">Developed in partnership with the University of Arizona, Eller MIS Solutions Center</font></div>
+                    <br />
+                    <div style="vertical-align:middle"><font style="font-size:160%" color="white">Kids at Hope &copy;2013</font> <a href="#"><font color="white">Privacy Policy</font></a></div>
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <ul>
+                        <li><a href="https://www.facebook.com/kidsathope" style="display: block; width: 60px; height: 45px; background:url(../images/social-icons.png) left top no-repeat; background-image:url(../images/social-icons.png)"></a></li>
+                    </ul>
+                </div>
             </div>
         </footer>
     </div>

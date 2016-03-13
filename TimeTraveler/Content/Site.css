@@ -1,6 +1,6 @@
 ﻿body {
     padding-bottom: 20px;
-    
+    color: white;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -85,10 +85,8 @@ textarea {
     z-index: -1;
 }
  
-.footer{
-    display:inline;
-    float:left;
-    position:relative;
+footer{
+    margin-top: 10px;
 }
 
 .mainbody{
@@ -102,22 +100,24 @@ textarea {
 }
 
 .title{
-    line-height: 1.2em;
     letter-spacing: -1px;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
 }
 
 .logo{
-    display: inline-block;
     font-size: 60px;
-    line-height: 1.2em;
     color: #262626;
     cursor: pointer;
     letter-spacing: -3px;
     font-weight: normal;
     text-transform: uppercase;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+a.logo:hover,
+a.logo:focus {
+    text-decoration: none;
 }
 
 .traveler{
@@ -128,18 +128,10 @@ textarea {
 .backpiece{
     background:url(../images/bg-top.png) left top no-repeat; 
     background-image:url(../images/bg-top.png);
-    padding: 30px 30px 30px 30px;
 }
 
 .mainContent{
-    padding: 20px 20px 20px 20px;
-    font-size: 150%;
+    min-height: 400px;
     background: #000;
-}
-
-.contentTitle{
-    color: rgb(255, 150, 1);
-    font-family: Bradley Hand ITC;
-    font-size: 400%;
-    font-weight: bold;
+    margin: 20px 0;
 }
