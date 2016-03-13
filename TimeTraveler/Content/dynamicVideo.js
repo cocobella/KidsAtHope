@@ -71,5 +71,30 @@ $(document).ready(function () {
 
     });
 
+    $('input[name="education"]').click(function () {
 
+        var span = document.getElementById('modalEducationChoice');
+        var theOption = $('input[name="education"]:checked').val();
+
+        switch (theOption) {
+            case "apprentice":
+                span.innerHTML = "to become an apprentice / intern";
+                $("#modalEducationVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_2_1/apprentice.mp4");
+                break;
+            case "university":
+                span.innerHTML = "to attend a University";
+                $("#modalEducationVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_2_1/university.mp4");
+                break;
+            case "career":
+                span.innerHTML = "to attend a Vocational / Career school";
+                $("#modalEducationVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_2_1/careerschool.mp4");
+                break;
+            case "community":
+                span.innerHTML = "to go to Community College";
+                $("#modalEducationVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_2_1/community.mp4");
+                break;
+            
+        }
+
+    });
 });
