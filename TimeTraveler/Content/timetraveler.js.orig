@@ -8,7 +8,8 @@ $(document).ready(function () {
             $("btnGo").addClass("disabled");
         }
     });
-    
+
+<<<<<<< HEAD
     $('#interestSubmit').click(function () {
         $.ajax({
             type: "POST",
@@ -21,6 +22,7 @@ $(document).ready(function () {
             }
 
         });
+=======
 
     $('input[name="whereLive"]').click(function () {
 
@@ -54,6 +56,7 @@ $(document).ready(function () {
                 break;
         }
 
+>>>>>>> 6f5aed82a8563675740bbcdaa2be0b2518425db9
     });
 
 });
