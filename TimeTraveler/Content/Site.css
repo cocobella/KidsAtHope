@@ -47,40 +47,34 @@ h1 {
     color: black;
 }
 
-.interests ul,
-.family ul {
+ul.select-grid {
   list-style-type: none;
+  padding: 0;
 }
 
-.interests li,
-.family li {
+ul.select-grid li {
   display: inline-block;
 }
 
-.interests input[type="checkbox"][id^="cb"],
-.family input[type="checkbox"][id^="cb"] {
+ul.select-grid input[type="checkbox"][id^="cb"] {
   display: none;
 }
 
-.interests label,
-.family label {
-  border: 1px solid #fff;
-  padding-right: 20px;
-  padding-left: 5px;
+ul.select-grid label {
   display: block;
   position: relative;
   margin: 10px;
   cursor: pointer;
+  background-color: #222;
 }
 
-.interests label:before,
-.family label:before {
-  background-color: white;
-  color: white;
+ul.select-grid label:before {
+  background-color: black;
+  color: black;
   content: " ";
   display: block;
   border-radius: 50%;
-  border: 1px solid grey;
+  border: 1px solid rgb(255, 150, 1);
   position: absolute;
   top: -5px;
   left: -5px;
@@ -92,36 +86,49 @@ h1 {
   transform: scale(0);
 }
 
-.interests label img{
-  height:80px;
-  transition-duration: 0.2s;
-  transform-origin: 50% 50%;
-}
-.family label img {
-  height: 155px;
+.interests label img {
+  height: 80px;
   transition-duration: 0.2s;
   transform-origin: 50% 50%;
 }
 
-.interests :checked + label,
-.family :checked + label {
-  border-color: #ddd;
+ul.select-grid :checked + label {
+  border-color: rgb(255, 150, 1);
 }
 
-.interests :checked + label:before,
-.family :checked + label:before {
+ul.select-grid :checked + label:before {
   content: "✓";
-  background-color: grey;
+  background-color: rgb(255, 150, 1);
   transform: scale(1);
 }
 
-.interests :checked + label img
-.family :checked + label img {
-    transform: scale(0.8);
+ul.select-grid :checked + label img {
+    transform: scale(0.75);
     box-shadow: 0 0 5px #333;
     z-index: -1;
 }
- 
+
+.select-grid-image {
+    display: table-cell;
+    vertical-align: middle;
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
+}
+
+.select-grid-image img {
+    width: 110px;
+    height: auto;
+}
+
+.select-grid-title {
+    width: 110px;
+    height: 60px;
+    overflow: hidden;
+    text-align: center;
+    padding: 5px 0;
+}
+
 footer{
     margin-top: 20px;
 }
@@ -172,4 +179,13 @@ a.logo:focus {
     background: #000;
     margin: 20px 0;
     padding: 20px;
+}
+
+#btnGo,
+#btnBack {
+    width: 200px;
+}
+
+#btnBack {
+    margin-right: 10px;
 }
