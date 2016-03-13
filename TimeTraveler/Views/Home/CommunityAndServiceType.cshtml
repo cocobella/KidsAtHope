@@ -36,7 +36,7 @@
 {
     <ul class="select-grid select-grid-large">
         <li>
-            <input type="radio" name="whereLive" id="cb1" value="Clean Graffiti" />
+            <input type="radio" name="service" id="cb1" value="graffiti" />
             <label for="cb1">
                 <div class="select-grid-image">
                     <img src="/images/community_and_service/cleaning_graffitti.jpg" />
@@ -47,7 +47,7 @@
             </label>
         </li>
         <li>
-            <input type="radio" name="whereLive" id="cb2" value="Coach" />
+            <input type="radio" name="service" id="cb2" value="coach" />
 
             <label for="cb2">
                 <div class="select-grid-image">
@@ -59,7 +59,7 @@
             </label>
         </li>
         <li>
-            <input type="radio" name="whereLive" id="cb3" value="Help Animals" />
+            <input type="radio" name="service" id="cb3" value="animals" />
             <label for="cb3">
                 <div class="select-grid-image">
                     <img src="/images/community_and_service/helping_animals.jpg" />
@@ -70,7 +70,7 @@
             </label>
         </li>
         <li>
-            <input type="radio" name="whereLive" id="cb4" value="Help Protect the Environment" />
+            <input type="radio" name="service" id="cb4" value="environment" />
             <label for="cb4">
                 <div class="select-grid-image">
                     <img src="/images/community_and_service/helping_the_environment.jpg" />
@@ -81,7 +81,7 @@
             </label>
         </li>
         <li>
-            <input type="radio" name="whereLive" id="cb5" value="Mentor Children" />
+            <input type="radio" name="service" id="cb5" value="children" />
             <label for="cb5">
                 <div class="select-grid-image">
                     <img src="/images/community_and_service/mentoring_children.jpg" />
@@ -93,7 +93,7 @@
         </li>
         <li>
 
-            <input type="radio" name="whereLive" id="cb6" value="Homeless Shelters" />
+            <input type="radio" name="service" id="cb6" value="homeless" />
             <label for="cb6">
                 <div class="select-grid-image">
                     <img src="/images/community_and_service/women_shelter.jpg" />
@@ -124,9 +124,9 @@
                         are helping their community.
                     </p>
                     <p>
-                        You chose to help the community by <em>&lt;selection&gt;</em>, check out the video below to see what that looks like.
+                        You chose to help the community by <span id="modalServiceChoice" style="font-weight:bold; font-family: 'Bradley Hand ITC'; color: #ff9601;">  </span>, check out the video below to see what that looks like.
                     </p>
-                    <!-- Video goes here -->
+                    <video id="modalServiceVideo" width="400" height="300" src="" controls />
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Continue</button>
