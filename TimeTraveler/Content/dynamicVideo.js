@@ -97,4 +97,38 @@ $(document).ready(function () {
         }
 
     });
+
+    $('input[name="career"]').click(function () {
+
+        var span = document.getElementById('modalCareerChoice');
+        var theOption = $('input[name="career"]:checked').val();
+
+        switch (theOption) {
+            case "athlete":
+                span.innerHTML = "an athlete";
+                $("#modalCareerVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_2_2/athlete.mp4");
+                break;
+            case "business":
+                span.innerHTML = "run a business";
+                $("#modalCareerVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_2_2/business.mp4");
+                break;
+            case "designer":
+                span.innerHTML = "a designer";
+                $("#modalCareerVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_2_2/designer.mp4");
+                break;
+            case "engineer":
+                span.innerHTML = "an engineer";
+                $("#modalCareerVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_2_2/engineer.mp4");
+                break;
+            case "medical":
+                span.innerHTML = "a doctor or nurse";
+                $("#modalCareerVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_2_2/medical.mp4");
+                break;
+            case "teacher":
+                span.innerHTML = "a teacher";
+                $("#modalCareerVideo").attr("src", "http://www.thetimetravelerapp.com/video/dest_2_2/teacher.mp4");
+                break;
+        }
+
+    });
 });
