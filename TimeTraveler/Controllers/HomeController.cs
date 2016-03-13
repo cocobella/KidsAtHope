@@ -103,25 +103,24 @@ namespace TimeTraveler.Controllers
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
 
-            // TODO: Using place holders for the time being
-            switch(whereLive)
+            switch (whereLive)
             {
-                case "1":
+                case "downtown":
                     this.TheTraveler.FutureHome = FutureHomeOption.DowntownCity;
                     break;
-                case "2":
+                case "mountain":
                     this.TheTraveler.FutureHome = FutureHomeOption.Mountains;
                     break;
-                case "3":
+                case "ocean":
                     this.TheTraveler.FutureHome = FutureHomeOption.Ocean;
                     break;
-                case "4":
+                case "ranch":
                     this.TheTraveler.FutureHome = FutureHomeOption.Ranch;
                     break;
-                case "5":
+                case "snow":
                     this.TheTraveler.FutureHome = FutureHomeOption.Snowland;
                     break;
-                case "6":
+                case "suburb":
                     this.TheTraveler.FutureHome = FutureHomeOption.Suburb;
                     break;
 
@@ -141,26 +140,25 @@ namespace TimeTraveler.Controllers
         public ActionResult HomeAndFamilyType(string familyType)
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
-
-            // TODO: Using place holders for the time being
+            
             switch (familyType)
             {
-                case "1":
+                case "dad":
                     this.TheTraveler.FamilyStyle = FamilyStyleOption.Dad;
                     break;
-                case "2":
+                case "married":
                     this.TheTraveler.FamilyStyle = FamilyStyleOption.Married;
                     break;
-                case "3":
+                case "mother":
                     this.TheTraveler.FamilyStyle = FamilyStyleOption.Mother;
                     break;
-                case "4":
+                case "multi":
                     this.TheTraveler.FamilyStyle = FamilyStyleOption.Multi_generational;
                     break;
-                case "5":
+                case "man":
                     this.TheTraveler.FamilyStyle = FamilyStyleOption.SingleMale;
                     break;
-                case "6":
+                case "woman":
                     this.TheTraveler.FamilyStyle = FamilyStyleOption.SingleWoman;
                     break;
             }
