@@ -215,7 +215,8 @@ namespace TimeTraveler.Controllers
         
         public ActionResult HomeType()
 		{
-			return View();	
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            return View(this.TheTraveler);	
 		}
 
         [HttpPost]
@@ -298,7 +299,8 @@ namespace TimeTraveler.Controllers
 
         public ActionResult Interests()
         {
-            return View();
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            return View(this.TheTraveler);
         }
         
         [HttpPost]
