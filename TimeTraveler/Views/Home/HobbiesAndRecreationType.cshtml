@@ -1,43 +1,133 @@
 ﻿@model TimeTraveler.Models.TimeTravelerDetail
 
 @{
-    ViewBag.Title = "Welcome";
+    ViewBag.Title = "Hobbies and Recreation";
 }
 
-<div class="row">
-    <div class="col-md-12 col-xs-12">
-        <h1>Welcome to the Time Machine!</h1>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-12 col-xs-12">
-        <p>
-            Content
-        </p>
-        
-        <div class="pull-right" style="margin-top: 10px;">
-            <button id="btnLetsGo" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#letsGoModal">Continue</button>
+<div class="page-header">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <h4>Destination 4:</h4>
+            <h1>Hobbies and Recreation</h1>
         </div>
-
-        <!-- Modal HTML -->
-        <div id="letsGoModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title">Hobbies and Recreation Result</h1>
-                    </div>
-                    <div class="modal-body">
-                        <p>
-                            Hobbies and Recreation Result text
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Continue</button>
-                    </div>
+        <div class="col-xs-12 col-md-6" style="height: 60px;">
+            <div id="destination-path">
+                <div id="destination-path-time-traveler" style="left: 280px;">
+                    <img src="~/images/gif/timetraveler_small.gif" />
                 </div>
             </div>
         </div>
-
     </div>
 </div>
+
+<div style="margin-bottom: 10px;">
+    <strong>Hey, everyone needs to do something that is fun during their free time. What would you like to do?</strong>
+</div>
+
+@using (Html.BeginForm("HobbiesAndRecreation", "Home", FormMethod.Post))
+{
+    <ul class="select-grid select-grid-large">
+        <li>
+            <input type="radio" name="whereLive" id="cb1" value="Hiking" />
+            <label for="cb1">
+                <div class="select-grid-image">
+                    <img src="/images/hobbies_and_recreation/Hiking.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Hiking
+                </div>
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="whereLive" id="cb2" value="Photography" />
+
+            <label for="cb2">
+                <div class="select-grid-image">
+                    <img src="/images/hobbies_and_recreation/Photography.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Photography
+                </div>
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="whereLive" id="cb3" value="Play a Sport" />
+            <label for="cb3">
+                <div class="select-grid-image">
+                    <img src="/images/hobbies_and_recreation/Play_a_sport.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Play a Sport
+                </div>
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="whereLive" id="cb4" value="Play an instrument" />
+            <label for="cb4">
+                <div class="select-grid-image">
+                    <img src="/images/hobbies_and_recreation/Play an Instrument.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Play an instrument
+                </div>
+            </label>
+        </li>
+        <li>
+            <input type="radio" name="whereLive" id="cb5" value="Travel" />
+            <label for="cb5">
+                <div class="select-grid-image">
+                    <img src="/images/hobbies_and_recreation/Travel.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Travel
+                </div>
+            </label>
+        </li>
+        <li>
+
+            <input type="radio" name="whereLive" id="cb6" value="Play Water Sports" />
+            <label for="cb6">
+                <div class="select-grid-image">
+                    <img src="/images/hobbies_and_recreation/watersport.jpg" />
+                </div>
+                <div class="select-grid-title">
+                    Play Water Sports
+                </div>
+
+            </label>
+        </li>
+    </ul>
+
+    <div class="pull-right" style="margin-top: 10px;">
+        <button id="btnLetsGo" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#letsGoModal">Continue</button>
+    </div>
+    <div class="clearfix"></div>
+
+    <!-- Modal HTML -->
+    <div id="letsGoModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">Cool, right?</h1>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Grown ups like to have fun too! That’s why Hobbies and Recreation is
+                        just as important a destination to think about as the other three.
+                    </p>
+                    <p>
+                        As a hobby, you would like to <em>&lt;selection&gt;</em>, check out the video below to see what that looks like.
+                    </p>
+                    <!-- Video goes here -->
+                    <p>
+                        These are just a few of the MILLIONS of things you can do for fun
+                        as an adult – the sky is the limit!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Continue</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
