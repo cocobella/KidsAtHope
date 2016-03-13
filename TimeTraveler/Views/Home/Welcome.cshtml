@@ -1,17 +1,19 @@
-﻿@{
+﻿@model TimeTraveler.Models.TimeTravelerDetail
+
+@{
     ViewBag.Title = "Welcome";
 }
 
 <div class="row">
     <div class="col-xs-12">
-        <h1>Hi <span class="visitorName">&lt;name&gt;</span>!</h1>
+        <h1>Hi <span class="visitorName">@Model.Name;</span>!</h1>
     </div>
 </div>
 
 <div class="row">
     <div class="col-xs-12 col-md-5">
         <p>
-            Okay, <span class="visitorName">&lt;name&gt;</span>, off we go. This is
+            Okay, <span class="visitorName">@Model.Name</span>, off we go. This is
             going to be fun.
         </p>
         <p>

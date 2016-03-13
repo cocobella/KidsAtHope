@@ -307,7 +307,8 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("HomeType");
+            //return RedirectToAction("Welcome");
+            return Json(new { result = "Redirect", url = Url.Action("Welcome", "Home") });
         }
 
         public ActionResult Pledge()
@@ -322,9 +323,10 @@ namespace TimeTraveler.Controllers
 
         public ActionResult Welcome()
         {
-            return View();
+            this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
+            return View("Welcome", this.TheTraveler);
         }
 
 
-	}
+    }
 }
