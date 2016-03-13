@@ -27,7 +27,7 @@
             payed off. You should be proud.
         </p>
         <p>
-            You will graduate in the year <em>&lt;year&gt;</em>.
+            You will graduate in the year <em>@Model.GraduationYear</em>.
         </p>
         <p>
             Your education is important, but you already
@@ -40,6 +40,7 @@
         </div>
     </div>
     <div class="col-xs-12 col-md-7">
-        <img src="~/images/education_and_career/rsz_1high_school_grad.jpg" class="img-responsive" style="margin: 0 auto;" />
+        <video src="@Model.GraduationVideo" width="400" height="300" controls />
+        @*<img src="~/images/education_and_career/rsz_1high_school_grad.jpg" class="img-responsive" style="margin: 0 auto;" />*@
     </div>
 </div>
