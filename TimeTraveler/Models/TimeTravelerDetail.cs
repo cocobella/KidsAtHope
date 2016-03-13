@@ -32,6 +32,19 @@ namespace TimeTraveler.Models
                 }
             }
         }
+        public string CollegeGradYear
+        {
+            get
+            {
+                // Get the difference between Senior HS and current then add 4 years for the college
+                int diff = 12 - this.Grade + 4;
+
+                // IF they're doing this past July then we need to add a year to account for the fact that schools wrap the "school year" 
+                if (DateTime.Now.Month >= 7) diff++;
+
+                return DateTime.Now.AddYears(diff).ToString("yyyy");
+            }
+        }
 
         public List<string> Likes { get; set; }
 
