@@ -11,6 +11,28 @@ namespace TimeTraveler.Models
 
         public string Name { get; set; }
         public int Grade { get; set; }
+
+        public string GraduationYear
+        {
+            get
+            {
+                try
+                {
+                    // Get the difference between Senior HS and current
+                    int diff = 12 - this.Grade;
+
+                    // IF they're doing this past July then we need to add a year to account for the fact that schools wrap the "school year" 
+                    if (DateTime.Now.Month >= 7) diff++;
+
+                    return DateTime.Now.AddYears(diff).ToString("yyyy");
+                }
+                catch 
+                {
+                    return DateTime.Now.ToString("yyyy");
+                }
+            }
+        }
+
         public List<string> Likes { get; set; }
 
         public FutureHomeOption FutureHome { get; set; }
@@ -308,6 +330,14 @@ namespace TimeTraveler.Models
         public TimeTravelerDetail()
         {
             this.Likes = new List<string>();
+            this.Education = EducationOption.Apprenticeship;
+            this.Community = AidingCommunityOption.Animals;
+            this.Hobby = HobbyOption.Hiking;
+            this.FamilyStyle = FamilyStyleOption.Dad;
+            this.FutureHome = FutureHomeOption.DowntownCity;
+            this.Name = "Your Uncle Bob";
+            this.Grade = 4;
+            this.Career = CareerOption.Athlete;
         }
     }
 
