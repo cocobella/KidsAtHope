@@ -264,7 +264,7 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("HomeResult");
+            return RedirectToAction("FamilyType");
         }
 
         public ActionResult FamilyType()
@@ -302,12 +302,7 @@ namespace TimeTraveler.Controllers
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
             // TODO: Make sure to redirect to the proper page
-            return RedirectToAction("HomeAndFamilyTypeResult");
-        }
-
-        public ActionResult HomeAndFamilyTypeResult()
-        {
-            return View();
+            return RedirectToAction("EducationAndCareer");
         }
 
         public ActionResult HowWasYourVisit()
