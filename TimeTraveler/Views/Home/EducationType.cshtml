@@ -30,7 +30,7 @@
 {
     <ul class="select-grid select-grid-large">
         <li>
-            <input type="radio" name="whereLive" id="cb1" value="Community College" />
+            <input type="radio" name="education" id="cb1" value="community" />
             <label for="cb1">
                 <div class="select-grid-image">
                     <img src="/images/education_and_career/CommunityCollege.jpg" />
@@ -41,7 +41,7 @@
             </label>
         </li>
         <li>
-            <input type="radio" name="whereLive" id="cb2" value="Internship/Apprenticeship" />
+            <input type="radio" name="education" id="cb2" value="apprentice" />
 
             <label for="cb2">
                 <div class="select-grid-image">
@@ -53,7 +53,7 @@
             </label>
         </li>
         <li>
-            <input type="radio" name="whereLive" id="cb3" value="University" />
+            <input type="radio" name="education" id="cb3" value="university" />
             <label for="cb3">
                 <div class="select-grid-image">
                     <img src="/images/education_and_career/University.jpg" />
@@ -64,7 +64,7 @@
             </label>
         </li>
         <li>
-            <input type="radio" name="whereLive" id="cb4" value="Vocational/Career School" />
+            <input type="radio" name="education" id="cb4" value="career" />
             <label for="cb4">
                 <div class="select-grid-image">
                     <img src="/images/education_and_career/vocational-scholarships.jpg" />
@@ -101,9 +101,9 @@
                         your College Graduation Date will be: <em>&lt;year&gt;</em>
                     </p>
                     <p>
-                        After High School, you decided to <em>&lt;selection&gt;</em>, check out the video below to see what that looks like.
+                        After High School, you decided to <span id="modalEducationChoice" style="font-weight:bold; font-family: 'Bradley Hand ITC'; color: #ff9601;">  </span>, check out the video below to see what that looks like.
                     </p>
-                    <!-- Video goes here -->
+                    <video id="modalEducationVideo" width="400" height="300" src="" controls />
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary btn-lg" data-dismiss="modal">Continue</button>
