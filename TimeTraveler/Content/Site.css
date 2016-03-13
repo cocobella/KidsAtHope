@@ -189,3 +189,15 @@ a.logo:focus {
 #btnBack {
     margin-right: 10px;
 }
+
+.modal-content {
+    background-color: #222;
+}
+
+.modal-header {
+    border-bottom-width: 0;
+}
+
+.modal-footer {
+    border-top-width: 0;
+}
