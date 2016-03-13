@@ -174,12 +174,7 @@ namespace TimeTraveler.Controllers
 
             SessionBag.Current.TheTraveler = this.TheTraveler;
 
-            return RedirectToAction("EducationResult");
-        }
-
-        public ActionResult EducationResult()
-        {
-            return View();
+            return RedirectToAction("CareerType");
         }
 
         public ActionResult HobbiesAndRecreation()
