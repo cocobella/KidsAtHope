@@ -1,11 +1,12 @@
 ﻿
 $(document).ready(function () {
 
-    $('#interestForm :checkbox').click(function () {
+    $('input[type="checkbox"]').click(function () {
         if (document.querySelectorAll('input[type="checkbox"]:checked').length >= 5) {
-            $("btnGo").removeClass("disabled");
+            $("#btnLetsGoI").removeClass("disabled");
+            
         } else {
-            $("btnGo").addClass("disabled");
+            $("#btnLetsGoI").addClass("disabled");
         }
     });
 

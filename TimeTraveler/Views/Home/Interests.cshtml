@@ -10,7 +10,7 @@
     </div>
 </div>
 
-@using (Html.BeginForm("Interests", "Home", FormMethod.Post))
+@using (Html.BeginForm("Interests", "Home", FormMethod.Post, new {id="interestForm"}))
 {
 <div class="row">
     <div class="col-md-12 col-xs-12">
@@ -202,7 +202,7 @@
         </ul>
 
         <div class="pull-right" style="margin-top: 10px;">
-            <button id="btnLetsGo" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#letsGoModal">Continue</button>
+            <button id="btnLetsGoI" class="btn btn-primary btn-lg disabled" data-toggle="modal" data-target="#letsGoModal">Continue</button>
         </div>
         
         <!-- Modal HTML -->
