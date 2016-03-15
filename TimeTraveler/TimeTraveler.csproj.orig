@@ -470,7 +470,11 @@
     <Content Include="images\social-icons.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+<<<<<<< HEAD
     <None Include="Properties\PublishProfiles\azgivecamp.pubxml" />
+=======
+    <None Include="Properties\PublishProfiles\TimeTraveler.pubxml" />
+>>>>>>> e4b693d273895291dd803fdebbcad404449d403f
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
