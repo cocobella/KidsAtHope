@@ -1,8 +1,9 @@
 ﻿
+$.ajaxSetup({ cache: false });
 $(document).ready(function () {
 
-    $('input[type="checkbox"]').click(function () {
-        if (document.querySelectorAll('input[type="checkbox"]:checked').length >= 5) {
+    $("input[type='checkbox']").click(function () {
+        if (document.querySelectorAll("input[type='checkbox']:checked").length >= 5) {
             $("#btnLetsGoI").removeClass("disabled");
             
         } else {
@@ -11,82 +12,46 @@ $(document).ready(function () {
     });
 
     
-    $('#btnWelcomeGo').click(function () {
-        window.location = '/Home/HomeType';
+    $("#btnWelcomeGo").click(function () {
+        window.location = "/Home/HomeType";
     });
 
-    $('#btnEduCarGo').click(function () {
-        window.location = '/Home/EducationType';
+    $("#btnEduCarGo").click(function () {
+        window.location = "/Home/EducationType";
     });
 
-    $('#btnTimeGo').click(function () {
-        window.location = '/Home/HowWasYourVisit';
+    $("#btnTimeGo").click(function () {
+        window.location = "/Home/HowWasYourVisit";
     });
 
-    $('#btnHowGo').click(function () {
-        window.location = '/';
-    });
-
-    
-    
-    $('#homeSubmit').click(function () {
-        $.ajax({
-            type: "POST",
-            url: '/Home/HomeType',
-            data: JSON.stringify(getItem()),
-            contentType: "application/json; charset=UTF-8",
-            dataType: "json",
-            success: function (data) {
-                window.location = data.url;
-            }
-        });
-    });
-
-    $('#familySubmit').click(function () {
-        $.ajax({
-            type: "POST",
-            url: '/Home/FamilyType',
-            data: JSON.stringify(getItem()),
-            contentType: "application/json; charset=UTF-8",
-            dataType: "json",
-            success: function (data) {
-                window.location = data.url;
-            }
-        });
-    });
-
-    $('#educationSubmit').click(function () {
-        $.ajax({
-            type: "POST",
-            url: '/Home/EducationType',
-            data: JSON.stringify(getItem()),
-            contentType: "application/json; charset=UTF-8",
-            dataType: "json",
-            success: function (data) {
-                window.location = data.url;
-            }
-        });
-    });
-    
-    $('#careerSubmit').click(function () {
-        $.ajax({
-            type: "POST",
-            url: '/Home/CareerType',
-            data: JSON.stringify(getItem()),
-            contentType: "application/json; charset=UTF-8",
-            dataType: "json",
-            success: function (data) {
-                window.location = data.url;
-            }
-        });
+    $("#btnHowGo").click(function () {
+        window.location = "/";
     });
 
     
-    $('#commSubmit').click(function () {
+    
+    $("#homeSubmit").click(function () {
         $.ajax({
             type: "POST",
-            url: '/Home/CommunityAndServiceType',
-            data: JSON.stringify(getItem()),
+            url: "/Home/HomeType",
+            data: JSON.stringify({ whereLive: getItem() }),
+            contentType: "application/json; charset=UTF-8",
+            dataType: "json",
+            success: function (data) {
+                window.location = data.url;
+            },
+            error: function (x, y, z) {
+                var w = 1;
+            }
+            
+        });
+    });
+
+    $("#familySubmit").click(function () {
+        $.ajax({
+            type: "POST",
+            url: "/Home/FamilyType",
+            data: JSON.stringify({ familyType: getItem() }),
             contentType: "application/json; charset=UTF-8",
             dataType: "json",
             success: function (data) {
@@ -95,11 +60,24 @@ $(document).ready(function () {
         });
     });
 
-    $('#hobbySubmit').click(function () {
+    $("#educationSubmit").click(function () {
         $.ajax({
             type: "POST",
-            url: '/Home/HobbiesAndRecreationType',
-            data: JSON.stringify(getItem()),
+            url: "/Home/EducationType",
+            data: JSON.stringify({ education: getItem() }),
+            contentType: "application/json; charset=UTF-8",
+            dataType: "json",
+            success: function (data) {
+                window.location = data.url;
+            }
+        });
+    });
+    
+    $("#careerSubmit").click(function () {
+        $.ajax({
+            type: "POST",
+            url: "/Home/CareerType",
+            data: JSON.stringify({ career: getItem() }),
             contentType: "application/json; charset=UTF-8",
             dataType: "json",
             success: function (data) {
@@ -108,11 +86,38 @@ $(document).ready(function () {
         });
     });
 
-   $('#interestSubmit').click(function () {
+    
+    $("#commSubmit").click(function () {
         $.ajax({
             type: "POST",
-            url: '/Home/Interests',
-            data: JSON.stringify(getInterests()),
+            url: "/Home/CommunityAndServiceType",
+            data: JSON.stringify({ service: getItem() }),
+            contentType: "application/json; charset=UTF-8",
+            dataType: "json",
+            success: function (data) {
+                window.location = data.url;
+            }
+        });
+    });
+
+    $("#hobbySubmit").click(function () {
+        $.ajax({
+            type: "POST",
+            url: "/Home/HobbiesAndRecreationType",
+            data: JSON.stringify({ hobby: getItem() }),
+            contentType: "application/json; charset=UTF-8",
+            dataType: "json",
+            success: function (data) {
+                window.location = data.url;
+            }
+        });
+    });
+
+   $("#interestSubmit").click(function () {
+        $.ajax({
+            type: "POST",
+            url: "/Home/Interests",
+            data: JSON.stringify({ interest: getInterests() }),
             contentType: "application/json; charset=UTF-8",
             dataType: "json",
             success: function (data) {
@@ -127,16 +132,16 @@ $(document).ready(function () {
 
     function getInterests(){
         var interests=[];
-        $('input:checked').each(function (i) {
+        $("input:checked").each(function (i) {
             interests[i] = $(this).val();
         });
-        return interests
+        return interests;
     }
 
     function getItem() {
         var i;
-        i = $('input:checked').val();
-        return i
+        i = $("input:checked").val();
+        return i;
     }
 
 
