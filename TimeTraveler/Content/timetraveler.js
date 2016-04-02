@@ -73,11 +73,15 @@ $(document).ready(function () {
         });
     });
     
+
     $("#careerSubmit").click(function () {
         $.ajax({
             type: "POST",
             url: "/Home/CareerType",
-            data: JSON.stringify({ career: getItem() }),
+            data: JSON.stringify({ 
+                selection: getItem(), 
+                othertext: getOtherText() 
+            }),
             contentType: "application/json; charset=UTF-8",
             dataType: "json",
             success: function (data) {
@@ -85,13 +89,16 @@ $(document).ready(function () {
             }
         });
     });
-
-    
+           
     $("#commSubmit").click(function () {
         $.ajax({
             type: "POST",
             url: "/Home/CommunityAndServiceType",
-            data: JSON.stringify({ service: getItem() }),
+            data: JSON.stringify(
+                {
+                    selection: getItem(),
+                    othertext: getOtherText()
+                }),
             contentType: "application/json; charset=UTF-8",
             dataType: "json",
             success: function (data) {
@@ -104,7 +111,11 @@ $(document).ready(function () {
         $.ajax({
             type: "POST",
             url: "/Home/HobbiesAndRecreationType",
-            data: JSON.stringify({ hobby: getItem() }),
+            data: JSON.stringify(
+                {
+                    selection: getItem(),
+                    othertext: getOtherText()
+                }),
             contentType: "application/json; charset=UTF-8",
             dataType: "json",
             success: function (data) {
@@ -144,5 +155,9 @@ $(document).ready(function () {
         return i;
     }
 
-
+    function getOtherText() {
+        var txt;
+        txt = $("#othertext").val();
+        return txt;
+    }
 

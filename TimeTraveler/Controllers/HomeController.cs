@@ -50,12 +50,15 @@ namespace TimeTraveler.Controllers
         }
 
         [HttpPost]
-        public ActionResult CareerType(string career, string otherText="")
-        {
+        public ActionResult CareerType(string selection, string otherText="") {        
+#if DEBUG
+            if (selection == null) throw new System.Exception("Argument is NULL");
+#endif 
+
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
             if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
 
-            switch (career)
+            switch (selection)
             {
                 case "athlete":
                     this.TheTraveler.Career = CareerOption.Athlete;
@@ -96,13 +99,16 @@ namespace TimeTraveler.Controllers
         }
 
         [HttpPost]
-        public ActionResult CommunityAndServiceType(string service, string otherText="")
-        {
+        public ActionResult CommunityAndServiceType(string selection, string otherText="")  {
+
+#if DEBUG
+            if (selection == null) throw new System.Exception("Argument is NULL");
+#endif 
 
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
             if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
 
-            switch (service)
+            switch (selection)
             {
                 case "animals":
                     this.TheTraveler.Community = AidingCommunityOption.Animals;
@@ -192,12 +198,12 @@ namespace TimeTraveler.Controllers
         }
         
         [HttpPost] 
-        public ActionResult HobbiesAndRecreationType(string hobby, string otherText="")
+        public ActionResult HobbiesAndRecreationType(string selection, string otherText="")
         {
             this.TheTraveler = SessionBag.Current.TheTraveler as TimeTravelerDetail;
             if (this.TheTraveler == null) this.TheTraveler = new TimeTravelerDetail();
 
-            switch (hobby)
+            switch (selection)
             {
                 case "hiking":
                     this.TheTraveler.Hobby = HobbyOption.Hiking;
