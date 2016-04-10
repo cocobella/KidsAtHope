@@ -28,7 +28,14 @@ $(document).ready(function () {
         window.location = "/";
     });
 
-    
+    $("input[type='radio']").click(function () {
+        if ($("#optOther").is(':checked')) {
+            $("#otherText").removeClass("hidden");
+        } else {
+            $("#otherText").addClass("hidden");
+        }
+    });
+
     
     $("#homeSubmit").click(function () {
         $.ajax({

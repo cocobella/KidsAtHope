@@ -333,6 +333,7 @@
     <Content Include="images\jpg\women_shelter_t.jpg" />
     <Content Include="images\jpg\Workout.jpg" />
     <Content Include="images\jpg\Workout_t.jpg" />
+    <Content Include="images\other.png" />
     <Content Include="images\png\AboutTT.png" />
     <Content Include="images\png\art.png" />
     <Content Include="images\png\art_t.png" />
@@ -468,6 +469,7 @@
     <Content Include="images\png\women_shelter_t.png" />
     <Content Include="images\png\Workout.png" />
     <Content Include="images\png\Workout_t.png" />
+    <Content Include="images\question.jpg" />
     <Content Include="images\social-icons.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
