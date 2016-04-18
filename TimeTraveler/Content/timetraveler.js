@@ -11,6 +11,18 @@ $(document).ready(function () {
         }
     });
 
+    $("#btnLetsGo").click(function () {
+        var selection = getItem();
+        if (selection = "other") {
+            $(".vidText").hide();
+            $(".vidVideo").hide();
+        } else {
+            $(".vidText").show();
+            $(".vidVideo").show();
+        }
+
+    });
+
     
     $("#btnWelcomeGo").click(function () {
         window.location = "/Home/HomeType";
@@ -164,7 +176,7 @@ $(document).ready(function () {
 
     function getOtherText() {
         var txt;
-        txt = $("#othertext").val();
+        txt = $("#otherText").val();
         return txt;
     }
 
