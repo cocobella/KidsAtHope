@@ -11,16 +11,19 @@ $(document).ready(function () {
         }
     });
 
-    $("#btnLetsGo").click(function () {
+    $("#btnLetsGo, #btnFamilyGo").click(function (event) {
         var selection = getItem();
-        if (selection = "other") {
+        if (selection == "other") {
             $(".vidText").hide();
             $(".vidVideo").hide();
         } else {
             $(".vidText").show();
             $(".vidVideo").show();
+            if (selection == null) { //make sure they have something selected
+                event.preventDefault();
+                return false;
+            }
         }
-
     });
 
     

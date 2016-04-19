@@ -1,4 +1,5 @@
-﻿
+﻿/// <reference path="dynamicVideo.js" />
+
 $(document).ready(function () {
 
    
