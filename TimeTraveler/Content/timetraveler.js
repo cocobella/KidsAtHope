@@ -13,9 +13,15 @@ $(document).ready(function () {
 
     $("#btnLetsGo, #btnFamilyGo").click(function (event) {
         var selection = getItem();
+        var otherText = getOtherText();
         if (selection == "other") {
-            $(".vidText").hide();
-            $(".vidVideo").hide();
+            if (otherText.length > 0) {
+                $(".vidText").hide();
+                $(".vidVideo").hide();
+            } else { //don't let them leave with blank other box if other is option picked
+                event.preventDefault();
+                return false;
+            }
         } else {
             $(".vidText").show();
             $(".vidVideo").show();
