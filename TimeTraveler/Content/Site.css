@@ -151,9 +151,29 @@ ul.select-grid :checked + label img {
     padding: 5px 0;
 }
 
+
+ul.select-grid-med :checked + label img {
+    transform: scale(0.85);
+}
+
+.select-grid-med .select-grid-image {
+    width: 210px;
+    height: 180px;
+}
+
+.select-grid-med .select-grid-image img {
+    width: 210px;
+}
+
+.select-grid-med .select-grid-title {
+    width: 210px;
+    height: auto;
+}
+
 ul.select-grid-large :checked + label img {
     transform: scale(0.85);
 }
+
 
 .select-grid-large .select-grid-image {
     width: 310px;
